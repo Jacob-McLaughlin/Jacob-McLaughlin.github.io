@@ -18,7 +18,7 @@
     "color": "#E97451"},
 
 "encoding": {
-     "x": {
+       "x": {
        "field": "Year",
        "type": "temporal",
        "axis": {
@@ -27,10 +27,12 @@
          "ticks": false,
          "labelAngle": 45}},
 
+         
       "y": {
-        "field": "Credit/GDP",
+        "field": "Ratio_Percent",
         "type": "quantitative",
-        "title": "",
+        "title": "% of Global GDP",
         "axis": {"grid": false}}
 }
+
 }
