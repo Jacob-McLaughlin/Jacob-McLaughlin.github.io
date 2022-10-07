@@ -8,7 +8,7 @@
       "anchor": "start",
       "color": "black"},
   
-  "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/IMFData_Clean.csv"},
+  "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/IMFLending_Clean.csv"},
   
   "transform": [
     {"calculate": "datum.Totals/1000000000", "as": "billions"}
