@@ -1,8 +1,8 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "title": {
-      "text": "IMF Credit Outstanding",
-      "subtitle":"($ billions) for all members from 1984-2022. Source: IMF",
+      "text": "IMF Lending Outstanding",
+      "subtitle":"Credit outstanding to all members. SDRs (billions). Source: IMF",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -19,7 +19,7 @@
 
   "mark": {
     "type": "bar",
-    "color": "#86d0bb"},
+    "color": "#000058"},
 
 "encoding": {
      "x": {
