@@ -39,6 +39,10 @@
     </div> 
     <div class="myWeek2">
         <h2> Week 2</h2>
+
+        <h3> IMF Outstanding </h3>
+        <p> This chart shows data. </p>
+        <div class="chart" id ="Chart3"></div>
     </div>
 </body>
 
@@ -47,10 +51,12 @@
     //Define charts:
     var myChart1 = "portfolio/charts/chartENV1.json";
     var myChart2 = "portfolio/charts/chartENV16.json";
+    var myChart3 = "portfolio/charts/chartWeek2.json"
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
 </script>
 
 
