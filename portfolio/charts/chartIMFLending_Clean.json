@@ -10,10 +10,6 @@
   
   "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/IMFLending_Clean.csv"},
   
-  "transform": [
-    {"calculate": "datum.Totals/1000000000", "as": "billions"}
-  ],
-  
   "height": 300,
   "width": 260,
 
@@ -24,7 +20,7 @@
 "encoding": {
      "x": {
        "field": "Year",
-       "type": "nominal",
+       "type": "temporal",
        "axis": {
          "title": null,
          "grid": false,
@@ -32,7 +28,7 @@
          "labelAngle": 45}},
 
       "y": {
-        "field": "Totals",
+        "field": "Totals_billion",
         "type": "quantitative",
         "title": "",
         "axis": {"grid": false}}
