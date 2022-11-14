@@ -47,6 +47,14 @@
     </div>
     <div class="myWeek3">       
         <h2> Week 3</h2>
+        <p> The chart below shows data for the unemployment rate in the USA taken from FRED. This data is encoded inline into VegaLite, after being edited in Python after importing the CSV.  </p>
+        <div class="chart" id ="Chart5"></div>
+        <p> The chart below shows the same data but with the visual encoding changed, and the data now represented as a line chart. </p>
+        <div class="chart" id ="Chart6"></div>
+        <p> As the data is a time series, changing the visual encoding to a line chart makes it easier to see small changes year-on-year and makes it easier to see long-term trends.</p>
+    </div>
+    <div class="myWeek4">
+        <h2> Week 4</h2>
     </div>
 </body>
 
@@ -57,15 +65,17 @@
     var myChart2 = "portfolio/charts/chartENV16.json";
     var myChart3 = "portfolio/charts/chartIMFLending_Clean.json";
     var myChart4 = "portfolio/charts/chartIMFLending_Adjusted.json";
+    var myChart5 = "portfolio/charts/week3_unemploymentchart1.json";
+    var myChart6 = "portfolio/charts/week3_unemploymentchart2.json";
+
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', myChart3);
     vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
 </script>
 
-
 </html>
-
-
