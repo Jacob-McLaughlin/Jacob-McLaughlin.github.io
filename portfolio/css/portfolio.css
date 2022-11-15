@@ -4,7 +4,7 @@
 /* Set the background color for my page: */
 
 body{
-    background-color: rgb(253, 218, 13);
+    background-color: #ff1d58;
  }
 
 
@@ -36,8 +36,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 5px dotted rgb(253, 218, 13);
-    background-color: rgb(253, 218, 13);
+    border: 5px dotted #ff1d58;
+    background-color: #ff1d58;
   }
   
   li {
@@ -46,7 +46,7 @@ ul {
   
   li a {
     display: block;
-    color:  rgb(253, 218, 13);
+    color:  #ff1d58;
     font-family: 'Verdana', sans-serif;
     font-size: 20px;
     text-align: center;
