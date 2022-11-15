@@ -82,3 +82,52 @@ h2{
 }
     
 
+/* BUTTONS */
+
+a{
+    border: 5px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+
+    margin:20px
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 5px dotted rgb(253, 218, 13);
+    background-color: rgb(253, 218, 13);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color:  rgb(253, 218, 13);
+    font-family: 'Verdana', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 90px;
+    text-decoration: none;
+  }
+
+/* unvisited link */
+a:link {
+    color: rgb(255, 255, 255);
+    font-variant: small-caps;
+    font-family: 'Verdana', sans-serif;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    text-decoration:underline;
+  }
