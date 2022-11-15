@@ -124,6 +124,7 @@ ul {
 /* Set the apperance of the class, chart */
 .chart{
     background-color: white;
+    margin: auto;
     width:450px;
     border-width: 2px;
     border-style: solid;
