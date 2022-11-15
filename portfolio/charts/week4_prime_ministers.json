@@ -1,0 +1,37 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Longest Serving UK Prime Ministers",
+      "subtitle":"The 25 longest serving PMs and their tenure in years. Source: Wikipedia",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/prime_ministers.csv"},
+  
+  "height": 300,
+  "width": 260,
+
+  "mark": {
+    "type": "bar",
+    "color": "#ff781f"},
+
+"encoding": {
+     "x": {
+       "field": "Tenure (Years)",
+       "type": "quantitative",
+       "axis": {
+         "title": "Tenure(Years)",
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 0}},
+
+      "y": {
+        "field": "Name",
+        "sort": "-x",
+        "type": "nominal",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}
