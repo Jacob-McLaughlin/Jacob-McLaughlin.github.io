@@ -123,11 +123,11 @@ a:link {
   }
   
   /* visited link */
-  a:visited {
+a:visited {
     color: rgb(255, 255, 255);
   }
   
   /* mouse over link */
-  a:hover {
+a:hover {
     text-decoration:underline;
   }
