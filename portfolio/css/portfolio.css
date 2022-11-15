@@ -123,8 +123,9 @@ ul {
 
 /* Set the apperance of the class, chart */
 .chart{
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
-    margin: auto;
     width:450px;
     border-width: 2px;
     border-style: solid;
