@@ -1,0 +1,38 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "Economic Inactivity Rate: UK Women Aged 16-64",
+      "subtitle":"(%) from 1971-2022. Source: ONS",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/ons_json_LF2T.json",
+  "format": {"type": "json", "property": "years"}
+  },
+  
+  "height": 150,
+  "width": 130,
+
+  "mark": {
+    "type": "line",
+    "color": "#00008B"},
+
+"encoding": {
+     "x": {
+       "field": "date",
+       "type": "temporal",
+       "axis": {
+         "title": "",
+         "grid": false,
+         "ticks": true,
+         "labelAngle": 0}},
+
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Economic Inactivity Rate (%)",
+        "axis": {"grid": false}}
+}
+}
