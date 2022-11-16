@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "title": {
+      "text": "A Map of Georgia, USA",
+      "subtitle":["All counties of the State of Georgia, Source- Github of deldersveld"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitlePadding":5,
+      "anchor":"start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/georgia_topojson_export.json",
+      "format": {"type": "topojson", "feature": "cb_2015_georgia_county_20m"}
+    },
+    "projection": {"type": "mercator"},
+    "mark": {
+        "type": "geoshape",
+        "fill": "silver",
+        "stroke": "black",
+        "strokeWidth":0.5},
+    "encoding": {"tooltip":{"field":"properties.NAME"}}
+  }
+  
