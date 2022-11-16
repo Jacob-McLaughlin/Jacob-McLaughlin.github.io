@@ -171,6 +171,17 @@ ul {
     border-color: rgb(255, 255, 255);
 }
 
+.myWeek8{
+    margin: auto;
+    max-width: 900px;
+    background-color: rgb(0, 0, 0);
+
+      
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+}
 
 /* Set the appearance of the class, chart */
 .chart{
