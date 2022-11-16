@@ -72,7 +72,7 @@ ul {
     
 .myWeek1{
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     background-color: rgb(0, 0, 0);
 
       
@@ -84,7 +84,7 @@ ul {
 
 .myWeek2{
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     background-color: rgb(0, 0, 0);
 
       
@@ -96,7 +96,7 @@ ul {
 
 .myWeek3{
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     background-color: rgb(0, 0, 0);
 
       
@@ -108,7 +108,7 @@ ul {
 
 .myWeek4{
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     background-color: rgb(0, 0, 0);
 
       
@@ -120,7 +120,7 @@ ul {
 
 .myWeek5{
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     background-color: rgb(0, 0, 0);
 
       
@@ -129,6 +129,19 @@ ul {
     border-radius: 10px;
     border-color: rgb(255, 255, 255);
 }
+
+.myWeek6{
+    margin: auto;
+    max-width: 1200px;
+    background-color: rgb(0, 0, 0);
+
+      
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+}
+
 
 
 /* Set the apperance of the class, chart */
