@@ -36,7 +36,7 @@
     },
     "tooltip":[
       {"field":"properties.NAME", "type": "nominal", "title":"County"},
-      {"field":"PCTPOVALL_2020", "title": "Poverty (%)"}
+      {"field":"PCTPOVALL_2020", "title": "Poverty Rate (%)"}
       ]
     }
 }  
