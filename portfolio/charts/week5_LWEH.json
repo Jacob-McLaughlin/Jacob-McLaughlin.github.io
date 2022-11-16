@@ -12,8 +12,8 @@
   "format": {"type": "json", "property": "years"}
   },
   
-  "height": 150,
-  "width": 130,
+  "height": 250,
+  "width": 217,
 
   "mark": {
     "type": "line",
