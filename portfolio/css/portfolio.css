@@ -175,11 +175,13 @@ ul {
 /* Set the apperance of the class, chart */
 .chart{
     background-color: white;
+    display:block;
+    margin-left: 25%;
+    margin-right: 25%;
     width:300px;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
-    margin-left:100px;
     border-color: rgb(255, 255, 255);
     
 }
