@@ -82,6 +82,17 @@ ul {
     border-color: rgb(255, 255, 255);
 }
 
+.myWeek1.chart{
+    background-color: yellow;
+    width:300px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: yellow;
+    
+}
+    
+
 .myWeek2{
     margin: auto;
     max-width: 900px;
