@@ -179,9 +179,7 @@ ul {
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:100px;
     border-color: rgb(255, 255, 255);
     
 }
