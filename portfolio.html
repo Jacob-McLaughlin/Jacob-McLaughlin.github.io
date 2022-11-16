@@ -67,6 +67,18 @@
     </div>
     <div class="myWeek5">
         <h2>Week 5</h2> 
+        <p> I used the ONS API to create a dashboard of time series all relating to economic inactivity in the UK. </p>
+        <div class="grid-container" style = "display: grid;">
+            <div class="grid-item"><div class = dashchart id = "Chart8" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart9" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart10" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart11" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart12" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart13" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart14" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart15" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart16" style = "display: block;"></div></div>
+        </div>
     </div>
 </body>
 
@@ -80,6 +92,15 @@
     var myChart5 = "portfolio/charts/week3_unemploymentchart_bar.json";
     var myChart6 = "portfolio/charts/week3_unemploymentchart_line.json";
     var myChart7 = "portfolio/charts/week4_prime_ministers.json"
+    var myChart8 = "portfolio/charts/week5_LF2S.json"
+    var myChart9 = "portfolio/charts/week5_YBTM.json"
+    var myChart10 = "portfolio/charts/week5_LF2T.json"
+    var myChart11 = "portfolio/charts/week5_LWEH.json"
+    var myChart12 = "portfolio/charts/week5_LF5T.json"
+    var myChart13 = "portfolio/charts/week5_LWEC.json"
+    var myChart14 = "portfolio/charts/week5_LF5P.json"
+    var myChart15 = "portfolio/charts/week5_LF5E.json"
+    var myChart16 = "portfolio/charts/week5_LF5J.json"
 
 
     // Embed charts:
@@ -90,6 +111,15 @@
     vegaEmbed('#Chart5', myChart5);
     vegaEmbed('#Chart6', myChart6);
     vegaEmbed('#Chart7', myChart7);
+    vegaEmbed('#Chart8', myChart8);
+    vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#Chart10', myChart10);
+    vegaEmbed('#Chart11', myChart11);
+    vegaEmbed('#Chart12', myChart12);
+    vegaEmbed('#Chart13', myChart13);
+    vegaEmbed('#Chart14', myChart14);
+    vegaEmbed('#Chart15', myChart15);
+    vegaEmbed('#Chart16', myChart16);
 </script>
 
 </html>
