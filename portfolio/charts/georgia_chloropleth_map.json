@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 300,
+   "title": {
+      "text": "A Map Showing Poverty in Georgia, USA",
+      "subtitle":["All counties of the State of Georgia and their Poverty Rates in 2020, Sources- Github of deldersveld, USDA"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitlePadding":5,
+      "anchor":"start",
+      "color": "black"
+    },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/georgia_topojson_export.json",
+    "format": {"type": "topojson", "feature": "cb_2015_georgia_county_20m"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/georgia_poverty.csv"
+        },
+        "key": "Area_name",
+        "fields": ["PCTPOVALL_2020"]
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": "geoshape",
+  "encoding":{
+    "color":{
+      "field":"PCTPOVALL_2020",
+      "type":"quantitative"
+    },
+    "tooltip":[
+      {"field":"properties.NAME", "type": "nominal", "title":"County"},
+      {"field":"PCTPOVALL_2020", "title": "Poverty (%)"}
+      ]
+    }
+}  
