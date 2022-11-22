@@ -19,7 +19,7 @@
 
   "mark": {
     "type":"circle",
-    "color":"rgb(0,47,167)",
+    "color":"black",
     "size":50},
  
 
@@ -35,18 +35,20 @@
       "field": "Biden_Percent", 
       "type": "quantitative",
       "title":null,
-      "title": "Votes for Biden (%)"
+      "title": "Votes for Biden (%)",
       }
   }},
 
     {
-      "mark": {"type": "line", "color": "grey"},
+      "mark": {"type": "line", "color": "red"},
 
-      "transform": [{"regression": "Biden_Percent", "on": "PCTPOVALL_2020"}],
-         
+      "transform": [{"regression": "Biden_Percent", 
+                     "on": "PCTPOVALL_2020",
+                     "extent": [0,50]},                 
+                     ],
       "encoding": {
         "x": {"field": "PCTPOVALL_2020", "type": "quantitative"},
-        "y": {"field": "Biden_Percent", "type": "quantitative"}
+        "y": {"field": "Biden_Percent", "type": "quantitative"},
       }
     }
 ]
