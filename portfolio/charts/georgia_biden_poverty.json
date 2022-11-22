@@ -1,0 +1,54 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": ["Percentage Votes for Joe Biden versus", "Poverty Rate in Georgia's counties (2020)"],
+    "subtitle":"%. Source: Georgia Secretary of State and USDA",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/Georgia_Poverty_Election.csv"},
+
+   
+  "height": 300,
+  "width": 300,
+
+"layer":[{
+
+  "mark": {
+    "type":"circle",
+    "color":"rgb(0,47,167)",
+    "size":50},
+ 
+
+  "encoding": {
+    "x": {
+      "field": "PCTPOVALL_2020", 
+      "type": "quantitative",
+      "scale": {"domain": [0, 50]},
+      "title": "Poverty Rate (%)"
+      },
+
+    "y": {
+      "field": "Biden_Percent", 
+      "type": "quantitative",
+      "title":null,
+      "title": "Votes for Biden (%)"
+      }
+  }},
+
+    {
+      "mark": {"type": "line", "color": "grey"},
+
+      "transform": [{"regression": "Biden_Percent", "on": "PCTPOVALL_2020"}],
+         
+      "encoding": {
+        "x": {"field": "PCTPOVALL_2020", "type": "quantitative"},
+        "y": {"field": "Biden_Percent", "type": "quantitative"}
+      }
+    }
+]
+
+}
