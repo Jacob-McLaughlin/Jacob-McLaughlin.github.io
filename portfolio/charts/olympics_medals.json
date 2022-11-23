@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": ["A Bubbleplot Showing National Olympic Medals in", "2008 and 2012, with Size Representing Population"],
+    "subtitle":"Source: IOC and World Bank",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/olympics_population.csv"},
+  "mark": "circle",
+  "encoding": {
+    "x": {"field": "2008_medals", "type": "quantitative", "title": "Medals in 2008"},
+    "y": {"field": "2012_medals", "type": "quantitative", "title": "Medals in 2012"},
+    "size": {"field": "population", "type": "quantitative", "title": "National Population (2021)"},
+    "color": {"value": "green"}
+  }
+}
