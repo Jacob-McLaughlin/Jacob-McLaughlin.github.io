@@ -1,0 +1,435 @@
+Year,Type,GrowthPerc
+1800,CO2 Emissions per Capita ,0
+1801,CO2 Emissions per Capita ,-0.783412391
+1802,CO2 Emissions per Capita ,-1.332617195
+1803,CO2 Emissions per Capita ,9.760691801
+1804,CO2 Emissions per Capita ,9.087876764
+1805,CO2 Emissions per Capita ,11.94995515
+1806,CO2 Emissions per Capita ,17.04707203
+1807,CO2 Emissions per Capita ,15.8211007
+1808,CO2 Emissions per Capita ,14.62059005
+1809,CO2 Emissions per Capita ,13.43251105
+1810,CO2 Emissions per Capita ,9.017177766
+1811,CO2 Emissions per Capita ,11.91351183
+1812,CO2 Emissions per Capita ,10.68995418
+1813,CO2 Emissions per Capita ,5.765334621
+1814,CO2 Emissions per Capita ,1.770312451
+1815,CO2 Emissions per Capita ,-1.793593555
+1816,CO2 Emissions per Capita ,-1.27825291
+1817,CO2 Emissions per Capita ,-5.683745813
+1818,CO2 Emissions per Capita ,-10.7298606
+1819,CO2 Emissions per Capita ,-14.23749721
+1820,CO2 Emissions per Capita ,-17.10283689
+1821,CO2 Emissions per Capita ,-18.88582721
+1822,CO2 Emissions per Capita ,-17.54374904
+1823,CO2 Emissions per Capita ,-14.29119552
+1824,CO2 Emissions per Capita ,-11.39267381
+1825,CO2 Emissions per Capita ,-11.61181406
+1826,CO2 Emissions per Capita ,-11.76233803
+1827,CO2 Emissions per Capita ,-9.262634389
+1828,CO2 Emissions per Capita ,-9.800711244
+1829,CO2 Emissions per Capita ,-9.634954463
+1830,CO2 Emissions per Capita ,13.63398867
+1831,CO2 Emissions per Capita ,8.886310351
+1832,CO2 Emissions per Capita ,7.433933509
+1833,CO2 Emissions per Capita ,6.183720446
+1834,CO2 Emissions per Capita ,5.171258799
+1835,CO2 Emissions per Capita ,3.662071703
+1836,CO2 Emissions per Capita ,20.18560546
+1837,CO2 Emissions per Capita ,14.79754743
+1838,CO2 Emissions per Capita ,16.77010842
+1839,CO2 Emissions per Capita ,18.78724174
+1840,CO2 Emissions per Capita ,22.81102625
+1841,CO2 Emissions per Capita ,23.52025636
+1842,CO2 Emissions per Capita ,28.42259176
+1843,CO2 Emissions per Capita ,33.8059193
+1844,CO2 Emissions per Capita ,40.1549364
+1845,CO2 Emissions per Capita ,49.68085957
+1846,CO2 Emissions per Capita ,43.02094609
+1847,CO2 Emissions per Capita ,54.51178156
+1848,CO2 Emissions per Capita ,62.81010276
+1849,CO2 Emissions per Capita ,72.38664861
+1850,CO2 Emissions per Capita ,81.57138333
+1851,CO2 Emissions per Capita ,71.99158022
+1852,CO2 Emissions per Capita ,70.4673823
+1853,CO2 Emissions per Capita ,68.47394581
+1854,CO2 Emissions per Capita ,101.7566174
+1855,CO2 Emissions per Capita ,87.75132987
+1856,CO2 Emissions per Capita ,100.7933779
+1857,CO2 Emissions per Capita ,95.97305511
+1858,CO2 Emissions per Capita ,90.87361335
+1859,CO2 Emissions per Capita ,110.5072774
+1860,CO2 Emissions per Capita ,134.0038612
+1861,CO2 Emissions per Capita ,142.0482092
+1862,CO2 Emissions per Capita ,132.4614759
+1863,CO2 Emissions per Capita ,145.1252463
+1864,CO2 Emissions per Capita ,161.5116888
+1865,CO2 Emissions per Capita ,174.7866891
+1866,CO2 Emissions per Capita ,180.7452553
+1867,CO2 Emissions per Capita ,185.7935981
+1868,CO2 Emissions per Capita ,177.9640876
+1869,CO2 Emissions per Capita ,189.0882295
+1870,CO2 Emissions per Capita ,192.6137952
+1871,CO2 Emissions per Capita ,207.0727212
+1872,CO2 Emissions per Capita ,220.4048264
+1873,CO2 Emissions per Capita ,229.2749756
+1874,CO2 Emissions per Capita ,216.8243193
+1875,CO2 Emissions per Capita ,231.14259
+1876,CO2 Emissions per Capita ,227.3103701
+1877,CO2 Emissions per Capita ,229.9183946
+1878,CO2 Emissions per Capita ,220.8341223
+1879,CO2 Emissions per Capita ,219.7478214
+1880,CO2 Emissions per Capita ,245.2754474
+1881,CO2 Emissions per Capita ,259.742567
+1882,CO2 Emissions per Capita ,259.748359
+1883,CO2 Emissions per Capita ,271.3155321
+1884,CO2 Emissions per Capita ,258.6248278
+1885,CO2 Emissions per Capita ,251.4939805
+1886,CO2 Emissions per Capita ,245.5000648
+1887,CO2 Emissions per Capita ,251.508955
+1888,CO2 Emissions per Capita ,262.5258255
+1889,CO2 Emissions per Capita ,272.299409
+1890,CO2 Emissions per Capita ,277.6499057
+1891,CO2 Emissions per Capita ,282.1908512
+1892,CO2 Emissions per Capita ,270.8478919
+1893,CO2 Emissions per Capita ,229.0563318
+1894,CO2 Emissions per Capita ,273.2568485
+1895,CO2 Emissions per Capita ,273.2554762
+1896,CO2 Emissions per Capita ,280.2844283
+1897,CO2 Emissions per Capita ,286.7033008
+1898,CO2 Emissions per Capita ,283.9564291
+1899,CO2 Emissions per Capita ,307.5891315
+1900,CO2 Emissions per Capita ,308.8951013
+1901,CO2 Emissions per Capita ,296.4574296
+1902,CO2 Emissions per Capita ,308.1525116
+1903,CO2 Emissions per Capita ,307.7142956
+1904,CO2 Emissions per Capita ,305.9950539
+1905,CO2 Emissions per Capita ,307.6941547
+1906,CO2 Emissions per Capita ,318.563258
+1907,CO2 Emissions per Capita ,333.3624603
+1908,CO2 Emissions per Capita ,319.0045818
+1909,CO2 Emissions per Capita ,319.3950085
+1910,CO2 Emissions per Capita ,319.7149219
+1911,CO2 Emissions per Capita ,327.4751017
+1912,CO2 Emissions per Capita ,302.7597553
+1913,CO2 Emissions per Capita ,338.3648705
+1914,CO2 Emissions per Capita ,323.2259369
+1915,CO2 Emissions per Capita ,326.9060304
+1916,CO2 Emissions per Capita ,340.3535321
+1917,CO2 Emissions per Capita ,333.3629446
+1918,CO2 Emissions per Capita ,302.0124028
+1919,CO2 Emissions per Capita ,291.6447232
+1920,CO2 Emissions per Capita ,303.526159
+1921,CO2 Emissions per Capita ,174.0197688
+1922,CO2 Emissions per Capita ,267.215305
+1923,CO2 Emissions per Capita ,290.8906302
+1924,CO2 Emissions per Capita ,309.8570614
+1925,CO2 Emissions per Capita ,287.9872731
+1926,CO2 Emissions per Capita ,113.0201392
+1927,CO2 Emissions per Capita ,304.3862037
+1928,CO2 Emissions per Capita ,279.959853
+1929,CO2 Emissions per Capita ,300.2169566
+1930,CO2 Emissions per Capita ,282.8926546
+1931,CO2 Emissions per Capita ,257.0536963
+1932,CO2 Emissions per Capita ,241.6874207
+1933,CO2 Emissions per Capita ,236.761114
+1934,CO2 Emissions per Capita ,261.6055599
+1935,CO2 Emissions per Capita ,264.8145824
+1936,CO2 Emissions per Capita ,283.8736456
+1937,CO2 Emissions per Capita ,294.0177572
+1938,CO2 Emissions per Capita ,275.9740537
+1939,CO2 Emissions per Capita ,277.1101377
+1940,CO2 Emissions per Capita ,294.2202963
+1941,CO2 Emissions per Capita ,287.982147
+1942,CO2 Emissions per Capita ,285.7784541
+1943,CO2 Emissions per Capita ,272.7508639
+1944,CO2 Emissions per Capita ,260.8661588
+1945,CO2 Emissions per Capita ,239.630385
+1946,CO2 Emissions per Capita ,253.3099309
+1947,CO2 Emissions per Capita ,272.2347079
+1948,CO2 Emissions per Capita ,282.2890129
+1949,CO2 Emissions per Capita ,288.417255
+1950,CO2 Emissions per Capita ,303.8199578
+1951,CO2 Emissions per Capita ,337.7748915
+1952,CO2 Emissions per Capita ,322.6996903
+1953,CO2 Emissions per Capita ,329.8219
+1954,CO2 Emissions per Capita ,337.9222551
+1955,CO2 Emissions per Capita ,354.8884002
+1956,CO2 Emissions per Capita ,350.8054887
+1957,CO2 Emissions per Capita ,345.7119398
+1958,CO2 Emissions per Capita ,332.1393143
+1959,CO2 Emissions per Capita ,322.3144703
+1960,CO2 Emissions per Capita ,348.632774
+1961,CO2 Emissions per Capita ,349.440307
+1962,CO2 Emissions per Capita ,349.9920627
+1963,CO2 Emissions per Capita ,355.1456306
+1964,CO2 Emissions per Capita ,355.5202756
+1965,CO2 Emissions per Capita ,363.0314589
+1966,CO2 Emissions per Capita ,357.2364498
+1967,CO2 Emissions per Capita ,335.4683347
+1968,CO2 Emissions per Capita ,343.7145196
+1969,CO2 Emissions per Capita ,357.648309
+1970,CO2 Emissions per Capita ,373.3080807
+1971,CO2 Emissions per Capita ,377.0381027
+1972,CO2 Emissions per Capita ,366.5934114
+1973,CO2 Emissions per Capita ,373.9859693
+1974,CO2 Emissions per Capita ,342.9915864
+1975,CO2 Emissions per Capita ,332.7338947
+1976,CO2 Emissions per Capita ,329.3749254
+1977,CO2 Emissions per Capita ,333.7031402
+1978,CO2 Emissions per Capita ,333.98703
+1979,CO2 Emissions per Capita ,362.3494533
+1980,CO2 Emissions per Capita ,314.9272807
+1981,CO2 Emissions per Capita ,301.1890073
+1982,CO2 Emissions per Capita ,291.9985008
+1983,CO2 Emissions per Capita ,289.6730139
+1984,CO2 Emissions per Capita ,277.5287374
+1985,CO2 Emissions per Capita ,298.7775483
+1986,CO2 Emissions per Capita ,304.5751406
+1987,CO2 Emissions per Capita ,306.0433275
+1988,CO2 Emissions per Capita ,304.1690533
+1989,CO2 Emissions per Capita ,311.2734025
+1990,CO2 Emissions per Capita ,324.6780998
+1991,CO2 Emissions per Capita ,328.829668
+1992,CO2 Emissions per Capita ,316.7873473
+1993,CO2 Emissions per Capita ,305.8223023
+1994,CO2 Emissions per Capita ,300.9416254
+1995,CO2 Emissions per Capita ,294.4667499
+1996,CO2 Emissions per Capita ,307.7775841
+1997,CO2 Emissions per Capita ,289.9098208
+1998,CO2 Emissions per Capita ,292.6851077
+1999,CO2 Emissions per Capita ,286.6209209
+2000,CO2 Emissions per Capita ,290.2738908
+2001,CO2 Emissions per Capita ,294.7800842
+2002,CO2 Emissions per Capita ,280.9920035
+2003,CO2 Emissions per Capita ,286.790504
+2004,CO2 Emissions per Capita ,285.7778688
+2005,CO2 Emissions per Capita ,281.2333512
+2006,CO2 Emissions per Capita ,276.9455393
+2007,CO2 Emissions per Capita ,268.6788502
+2008,CO2 Emissions per Capita ,256.2371423
+2009,CO2 Emissions per Capita ,220.4105176
+2010,CO2 Emissions per Capita ,229.2183874
+2011,CO2 Emissions per Capita ,199.571911
+2012,CO2 Emissions per Capita ,208.3558257
+2013,CO2 Emissions per Capita ,199.7963993
+2014,CO2 Emissions per Capita ,173.4352791
+2015,CO2 Emissions per Capita ,161.42966
+2016,CO2 Emissions per Capita ,145.5556925
+1800,Real GDP per Capita,0
+1801,Real GDP per Capita,0.272334275
+1802,Real GDP per Capita,0.698622911
+1803,Real GDP per Capita,-2.582202914
+1804,Real GDP per Capita,-3.94041763
+1805,Real GDP per Capita,0.223006094
+1806,Real GDP per Capita,-1.7116004
+1807,Real GDP per Capita,3.177044512
+1808,Real GDP per Capita,-3.029505989
+1809,Real GDP per Capita,-1.312334619
+1810,Real GDP per Capita,3.790323065
+1811,Real GDP per Capita,1.365085151
+1812,Real GDP per Capita,-4.054504595
+1813,Real GDP per Capita,-0.383835178
+1814,Real GDP per Capita,-3.883387013
+1815,Real GDP per Capita,4.506096332
+1816,Real GDP per Capita,-2.591637968
+1817,Real GDP per Capita,-2.568903775
+1818,Real GDP per Capita,-4.074657014
+1819,Real GDP per Capita,-7.075862128
+1820,Real GDP per Capita,-0.844437392
+1821,Real GDP per Capita,-0.830280521
+1822,Real GDP per Capita,-0.619711545
+1823,Real GDP per Capita,0.685328061
+1824,Real GDP per Capita,4.630467507
+1825,Real GDP per Capita,5.297783191
+1826,Real GDP per Capita,-1.701307613
+1827,Real GDP per Capita,4.560137752
+1828,Real GDP per Capita,3.211353802
+1829,Real GDP per Capita,2.649106029
+1830,Real GDP per Capita,5.831292645
+1831,Real GDP per Capita,7.627817114
+1832,Real GDP per Capita,6.986653686
+1833,Real GDP per Capita,6.841701226
+1834,Real GDP per Capita,9.031495928
+1835,Real GDP per Capita,14.28424389
+1836,Real GDP per Capita,15.79084628
+1837,Real GDP per Capita,13.50242524
+1838,Real GDP per Capita,17.76620792
+1839,Real GDP per Capita,18.96574646
+1840,Real GDP per Capita,17.93346142
+1841,Real GDP per Capita,13.3677527
+1842,Real GDP per Capita,11.39926149
+1843,Real GDP per Capita,13.54144777
+1844,Real GDP per Capita,20.86948746
+1845,Real GDP per Capita,24.91197952
+1846,Real GDP per Capita,30.52368842
+1847,Real GDP per Capita,27.50018227
+1848,Real GDP per Capita,28.77391036
+1849,Real GDP per Capita,28.25241344
+1850,Real GDP per Capita,24.95614415
+1851,Real GDP per Capita,28.8481042
+1852,Real GDP per Capita,31.206439
+1853,Real GDP per Capita,34.4859868
+1854,Real GDP per Capita,38.63440879
+1855,Real GDP per Capita,35.50411497
+1856,Real GDP per Capita,40.02178211
+1857,Real GDP per Capita,39.87082124
+1858,Real GDP per Capita,37.83585578
+1859,Real GDP per Capita,41.51338277
+1860,Real GDP per Capita,43.54963482
+1861,Real GDP per Capita,44.59992795
+1862,Real GDP per Capita,41.6446158
+1863,Real GDP per Capita,47.51922392
+1864,Real GDP per Capita,47.77954995
+1865,Real GDP per Capita,52.86290008
+1866,Real GDP per Capita,53.06788951
+1867,Real GDP per Capita,51.96056576
+1868,Real GDP per Capita,56.0678166
+1869,Real GDP per Capita,57.98355727
+1870,Real GDP per Capita,68.42344096
+1871,Real GDP per Capita,76.01222697
+1872,Real GDP per Capita,74.35208622
+1873,Real GDP per Capita,73.19972724
+1874,Real GDP per Capita,78.10767971
+1875,Real GDP per Capita,77.16545226
+1876,Real GDP per Capita,75.38394239
+1877,Real GDP per Capita,74.44301013
+1878,Real GDP per Capita,72.00275761
+1879,Real GDP per Capita,66.40134149
+1880,Real GDP per Capita,76.52087506
+1881,Real GDP per Capita,78.79257032
+1882,Real GDP per Capita,79.39854957
+1883,Real GDP per Capita,83.25449344
+1884,Real GDP per Capita,79.21628147
+1885,Real GDP per Capita,75.3672209
+1886,Real GDP per Capita,74.02572768
+1887,Real GDP per Capita,79.62672351
+1888,Real GDP per Capita,83.68335957
+1889,Real GDP per Capita,87.6516492
+1890,Real GDP per Capita,87.66624352
+1891,Real GDP per Capita,91.30216191
+1892,Real GDP per Capita,84.37768953
+1893,Real GDP per Capita,80.64184533
+1894,Real GDP per Capita,87.55772752
+1895,Real GDP per Capita,91.52817436
+1896,Real GDP per Capita,97.37704623
+1897,Real GDP per Capita,97.33244415
+1898,Real GDP per Capita,105.4796224
+1899,Real GDP per Capita,111.0711746
+1900,Real GDP per Capita,108.8899658
+1901,Real GDP per Capita,111.4434347
+1902,Real GDP per Capita,112.6352579
+1903,Real GDP per Capita,108.3963495
+1904,Real GDP per Capita,109.1361436
+1905,Real GDP per Capita,114.0402105
+1906,Real GDP per Capita,117.2189748
+1907,Real GDP per Capita,119.4001793
+1908,Real GDP per Capita,109.6310379
+1909,Real GDP per Capita,112.5181775
+1910,Real GDP per Capita,117.3094569
+1911,Real GDP per Capita,122.1509351
+1912,Real GDP per Capita,124.9475668
+1913,Real GDP per Capita,133.3739284
+1914,Real GDP per Capita,135.2570881
+1915,Real GDP per Capita,145.406638
+1916,Real GDP per Capita,147.985826
+1917,Real GDP per Capita,146.4663662
+1918,Real GDP per Capita,151.2524949
+1919,Real GDP per Capita,132.5711039
+1920,Real GDP per Capita,116.9445047
+1921,Real GDP per Capita,94.22274449
+1922,Real GDP per Capita,103.1727473
+1923,Real GDP per Capita,107.9164311
+1924,Real GDP per Capita,115.8487389
+1925,Real GDP per Capita,122.6715829
+1926,Real GDP per Capita,114.6788007
+1927,Real GDP per Capita,130.1051237
+1928,Real GDP per Capita,130.7398369
+1929,Real GDP per Capita,136.5595588
+1930,Real GDP per Capita,133.1565018
+1931,Real GDP per Capita,121.0663284
+1932,Real GDP per Capita,120.0387695
+1933,Real GDP per Capita,126.2032997
+1934,Real GDP per Capita,139.026817
+1935,Real GDP per Capita,146.758424
+1936,Real GDP per Capita,157.2411857
+1937,Real GDP per Capita,164.8256874
+1938,Real GDP per Capita,165.6928632
+1939,Real GDP per Capita,175.9680623
+1940,Real GDP per Capita,200.7213442
+1941,Real GDP per Capita,228.7370236
+1942,Real GDP per Capita,232.9197634
+1943,Real GDP per Capita,235.1811745
+1944,Real GDP per Capita,219.0626788
+1945,Real GDP per Capita,203.0428094
+1946,Real GDP per Capita,195.6868977
+1947,Real GDP per Capita,189.7771097
+1948,Real GDP per Capita,196.180514
+1949,Real GDP per Capita,204.4263229
+1950,Real GDP per Capita,213.1336047
+1951,Real GDP per Capita,226.5939882
+1952,Real GDP per Capita,230.8770827
+1953,Real GDP per Capita,248.1222097
+1954,Real GDP per Capita,261.9184039
+1955,Real GDP per Capita,274.4940623
+1956,Real GDP per Capita,278.7797086
+1957,Real GDP per Capita,284.0937973
+1958,Real GDP per Capita,287.3746231
+1959,Real GDP per Capita,300.9868081
+1960,Real GDP per Capita,322.6316898
+1961,Real GDP per Capita,330.0086202
+1962,Real GDP per Capita,330.6017421
+1963,Real GDP per Capita,348.7423501
+1964,Real GDP per Capita,370.2722871
+1965,Real GDP per Capita,377.0106316
+1966,Real GDP per Capita,381.6689754
+1967,Real GDP per Capita,392.1084345
+1968,Real GDP per Capita,416.6104137
+1969,Real GDP per Capita,424.2708204
+1970,Real GDP per Capita,437.0090019
+1971,Real GDP per Capita,453.0636051
+1972,Real GDP per Capita,473.9987048
+1973,Real GDP per Capita,509.6374795
+1974,Real GDP per Capita,494.3475445
+1975,Real GDP per Capita,485.3495044
+1976,Real GDP per Capita,502.3754894
+1977,Real GDP per Capita,517.2091108
+1978,Real GDP per Capita,542.8432966
+1979,Real GDP per Capita,565.7100093
+1980,Real GDP per Capita,550.5950517
+1981,Real GDP per Capita,544.7813426
+1982,Real GDP per Capita,558.7332153
+1983,Real GDP per Capita,586.3607708
+1984,Real GDP per Capita,600.8603054
+1985,Real GDP per Capita,628.3390444
+1986,Real GDP per Capita,649.6223834
+1987,Real GDP per Capita,688.3266931
+1988,Real GDP per Capita,732.4162317
+1989,Real GDP per Capita,751.8417656
+1990,Real GDP per Capita,755.7607013
+1991,Real GDP per Capita,743.5161876
+1992,Real GDP per Capita,743.6795855
+1993,Real GDP per Capita,762.2340923
+1994,Real GDP per Capita,792.6363258
+1995,Real GDP per Capita,811.3194924
+1996,Real GDP per Capita,831.1511196
+1997,Real GDP per Capita,856.5909861
+1998,Real GDP per Capita,887.7300974
+1999,Real GDP per Capita,918.7178618
+2000,Real GDP per Capita,946.5251551
+2001,Real GDP per Capita,973.0736406
+2002,Real GDP per Capita,995.7314955
+2003,Real GDP per Capita,1029.702796
+2004,Real GDP per Capita,1048.40479
+2005,Real GDP per Capita,1070.137151
+2006,Real GDP per Capita,1086.634344
+2007,Real GDP per Capita,1110.987078
+2008,Real GDP per Capita,1090.796962
+2009,Real GDP per Capita,1034.488599
+2010,Real GDP per Capita,1048.268839
+2011,Real GDP per Capita,1054.282014
+2012,Real GDP per Capita,1066.793368
+2013,Real GDP per Capita,1081.282567
+2014,Real GDP per Capita,1111.838463
+2015,Real GDP per Capita,1130.544317
+2016,Real GDP per Capita,1142.951371
