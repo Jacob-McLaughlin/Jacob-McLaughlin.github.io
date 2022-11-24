@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+    "text": ["Increase in CO2 Emissions Per Capita and", "Real GDP Per Capita versus 1800 levels (for the UK)"],
+    "subtitle": "Source: Our World in Data",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": { "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/UK_GDP_CO2_Growth.csv"},
+  "height": 500,
+  "width": 300,
+  "mark": {"type": "line", "color": "red"},
+  "encoding": {
+    "row": {"field": "Type", "title": ""},
+    "y": {
+      "field": "GrowthPerc",
+      "type": "quantitative",
+      "title": "% increase versus 1800"
+    },
+    "x": {"field": "Year", "type": "temporal"},
+  }
+}
