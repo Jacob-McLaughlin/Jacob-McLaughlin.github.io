@@ -20,13 +20,15 @@ years = ["2020"]
 house_finances = pd.DataFrame()
 for year in years:
   url_year = url_base_year.format(year)
+  #Iterate over the different house seats 
   for code in house_codes:
     url_house = url_base_house.format(code)
     url = url_year + url_house
     r = requests.get(url)
-    print(code)
+    #Access the webpage for that house seat
     secrets_page = pd.read_html(r.text)
     for j in range(len(secrets_page[0])):
+      #Reformat the candidate name 
       candidate = secrets_page[0].iloc[j][0]
       if "Winner" in candidate: 
         winner = "Y"
@@ -45,4 +47,4 @@ for year in years:
       amount_spent = secrets_page[0].iloc[j][2]
       row = pd.DataFrame([{'Seat': code, 'Candidate': short_name, 'Party': party, 'Raised': amount_raised, 'Spent': amount_spent, 'Winner': winner, 'Incumbent': incumbent}])
       house_finances = pd.concat([house_finances, row]) 
-      house_finances.to_csv("2020_house_finances_open_secrets.csv")
+house_finances.to_csv("2020_house_finances_open_secrets.csv")
