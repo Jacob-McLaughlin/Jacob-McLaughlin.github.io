@@ -40,7 +40,7 @@ for year in years:
         votes = candidate_results.split("%")[1]
         #Create row to add to dataframe
         row = pd.DataFrame([{'Seat': seat, 'Candidate': short_name, 'Party': party, 'Incumbent': incumbency, 'Percent': percentage, 'Votes': votes, 'Year': year}])
-      house_results = pd.concat([house_results, row]) 
+        house_results = pd.concat([house_results, row]) 
 #Show output 
 print(house_results)
 #Write to csv
