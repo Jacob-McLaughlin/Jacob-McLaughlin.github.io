@@ -1,0 +1,87 @@
+Seat,Candidate,Party,Incumbent,Percent,Votes,Year
+AL04,Neighbors,dem,N,17.7,"56,237",2020
+AK01,Galvin,dem,N,45.4,"159,856",2020
+CA05,Giblin,gop,N,23.9,"85,227",2020
+CA11,DeSaulnier,dem,Y,73,"271,063",2020
+CA14,Petel,gop,N,20.7,"72,705",2020
+CA15,Hayden,gop,N,29.1,"99,710",2020
+CA26,Baldwin-Kennedy,gop,N,39.4,"135,877",2020
+CA30,Reed,gop,N,30.5,"105,426",2020
+CA38,Tolar,dem,N,25.7,"65,739",2020
+CA44,Joya,dem,N,32.2,"66,375",2020
+CA46,Waters,gop,N,31.2,"71,716",2020
+CA52,DeBello,gop,N,38.4,"152,350",2020
+CA53,Jacobs,dem,N,59.5,"199,244",2020
+CA53,Gomez,dem,N,40.5,"135,614",2020
+CO01,Bolling,gop,N,23.5,"105,955",2020
+GA04,Ezammudeen,gop,N,19.9,"69,393",2020
+GA14,Van Ausdal,dem,N,25.3,"77,798",2020
+IL02,Raborn,gop,N,21.2,"63,142",2020
+IL05,Hanson,gop,N,26.6,"96,200",2020
+IL07,Cameron,gop,N,13.3,"41,390",2020
+IL09,J. Schakowsky,dem,Y,71,"262,045",2020
+IL09,S. Sangari,gop,N,29,"107,125",2020
+IL18,LaHood,gop,Y,70.4,"261,840",2020
+IL18,Petrilli,dem,N,29.6,"110,039",2020
+KS02,LaTurner,gop,N,55.1,"185,464",2020
+KY01,Rhodes,dem,N,25,"82,141",2020
+KY05,Best,dem,N,15.8,"47,056",2020
+LA01,Dugas,dem,N,25.3,"94,730",2020
+LA02,Schilling,gop,N,15,"47,575",2020
+LA02,G. Harris,dem,N,10.6,"33,684",2020
+LA02,Vincent,gop,N,4.9,"15,565",2020
+LA03,C. Higgins,gop,Y,67.8,"230,480",2020
+LA03,B. Harris,dem,N,17.9,"60,852",2020
+LA04,Trundle,dem,N,7.8,"23,813",2020
+LA04,Gibson,gop,N,6.3,"19,343",2020
+LA05,L. Harris,gop,N,16.6,"51,240",2020
+MD04,McDermott,gop,N,20.3,"71,671",2020
+MI09,Langworthy,gop,N,38.4,"153,296",2020
+MI13,Dudenhoefer,gop,N,18.6,"53,311",2020
+MI14,Lawrence,dem,Y,79.3,"271,370",2020
+MI14,Patrick,gop,N,18.3,"62,664",2020
+MN05,L. Johnson,gop,N,25.9,"102,878",2020
+MS02,Flowers,gop,N,34,"101,010",2020
+MS03,Benford,dem,N,35.3,"120,782",2020
+MO01,Rogers,gop,N,19,"59,940",2020
+MO03,Rezabek,dem,N,28.5,"116,095",2020
+MO07,Montseny,dem,N,26.7,"98,111",2020
+NV01,Bentley,gop,N,33.4,"74,490",2020
+NH02,McLane Kuster,dem,Y,53.9,"208,289",2020
+NJ04,C. Smith,gop,Y,59.9,"254,103",2020
+NJ04,S. Schmid,dem,N,38.3,"162,420",2020
+NJ06,Onuoha,gop,N,38.8,"126,760",2020
+NJ07,Kean Jr.,gop,N,49.4,"214,318",2020
+NJ08,Mushnick,gop,N,24.6,"58,686",2020
+NJ10,Zinone,gop,N,13.9,"40,298",2020
+NY07,Kelly,gop,N,14.4,"32,520",2020
+NY08,Wallace,gop,N,15.2,"42,007",2020
+NY09,Jean-Pierre,gop,N,15.9,"43,950",2020
+NY12,Santiago-Cano,gop,N,16.5,"53,061",2020
+NY15,Delices,gop,N,11.1,"21,221",2020
+NY26,Donovan,gop,N,28.7,"91,687",2020
+NY27,Jacobs,gop,Y,59.7,"229,044",2020
+NY27,McMurray,dem,N,39,"149,559",2020
+NC03,Farrow,dem,N,36.6,"132,752",2020
+NC04,Thomas,gop,N,32.7,"161,298",2020
+OH03,Richardson,gop,N,29.2,"93,569",2020
+OH04,Freshour,dem,N,29.3,"101,897",2020
+OH16,Gonzalez,gop,Y,63.2,"247,335",2020
+OH16,Godfrey,dem,N,36.8,"144,071",2020
+OK03,Midyett,dem,N,21.5,"66,501",2020
+PA02,Torres,gop,N,27.5,"75,022",2020
+PA03,Harvey,gop,N,9,"33,671",2020
+PA07,Scheller,gop,N,48.1,"181,407",2020
+PA15,Williams,dem,N,26.5,"92,156",2020
+PA18,Doyle,dem,Y,69.2,"266,084",2020
+PA18,Negron,gop,N,30.8,"118,163",2020
+SC06,McCollum,gop,N,30.8,"89,258",2020
+TN04,DesJarlais,gop,Y,66.7,"223,802",2020
+TN06,Finley,dem,N,24,"83,852",2020
+TX04,Foster,dem,N,22.7,"76,326",2020
+TX15,De La Cruz-Hernandez,gop,N,47.6,"109,017",2020
+TX30,E.B. Johnson,dem,Y,77.5,"204,928",2020
+VT01,Berry,gop,N,27,"95,830",2020
+WV03,Miller,gop,Y,71.3,"161,585",2020
+WV03,Turner,dem,N,28.7,"64,927",2020
+WI04,Rogers,gop,N,22.7,"70,769",2020
