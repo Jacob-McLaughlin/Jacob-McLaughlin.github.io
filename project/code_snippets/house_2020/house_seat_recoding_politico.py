@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+#This code snippet ensures that the results scraped from politico and the finances scraped from open secrets have the names of the seats in the same format
 house_finances_2020 = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/2020_house_finances_open_secrets.csv")
 house_results_2020 = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/politico_2020_house.csv")
 #We first want to ensure that the names of the house seats are the same across both dataframes
