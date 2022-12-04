@@ -1,4 +1,5 @@
 import pandas as pd	
+#This code snippet scrapes politico for House results from the 2020 election
 #Create a list of all US states to iterate over 
 states = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/US_state_list.csv")
 state_list = states["State"].tolist()
