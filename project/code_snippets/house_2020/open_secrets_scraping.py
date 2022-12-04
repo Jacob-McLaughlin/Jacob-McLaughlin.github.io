@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import requests
+#This code snippet scrapes data for the 2020 House election from OpenSecrets
 #Import the number of house districts for each state 
 congress_numbers = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/US_state_congress_numbers.csv")
 #Generate the codes for each district in the format "AL01"
