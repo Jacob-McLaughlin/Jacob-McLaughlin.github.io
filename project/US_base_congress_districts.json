@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 300,
+  "title": {
+    "text": "Congressional Districts of the USA",
+    "subtitle": [
+      "American Congressional Districts (2011-2020 map), Source- Github of deldersveld"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitlePadding": 5,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/united-states/lower-quality-20m/20m-US-congressional-districts-2015.json",
+    "format": {"type": "topojson", "feature": "cb_2015_us_cd114_20m"}
+  },
+  "projection": {"type": "albersUSA"},
+  "mark": {
+    "type": "geoshape",
+    "fill": "lightgrey",
+    "stroke": "black",
+    "strokeWidth": 0.5
+  },
+}
