@@ -223,7 +223,9 @@ ul {
 .widechart{
     background-color: white;
     display:block;
-    width:880px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width:720px;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
