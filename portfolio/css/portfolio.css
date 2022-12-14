@@ -220,4 +220,16 @@ ul {
     border-color: rgb(255, 255, 255);
     
 }
+.widechart{
+    background-color: white;
+    display:block;
+    margin-left: 20%;
+    margin-right: 20%;
+    width:500px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    
+}
     
