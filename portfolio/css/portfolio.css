@@ -213,6 +213,19 @@ ul {
     display:block;
     margin-left: 25%;
     margin-right: 25%;
+    width:300px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    
+}
+   
+.widechart{
+    background-color: white;
+    display:block;
+    margin-left: 25%;
+    margin-right: 25%;
     width:500px;
     border-width: 2px;
     border-style: solid;
