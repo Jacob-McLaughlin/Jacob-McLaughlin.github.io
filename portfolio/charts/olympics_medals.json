@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 450,
+  "height": 400,
   "title": {
     "text": ["A Bubbleplot Showing National Olympic Medals in", "2008 and 2012, with Size Representing Population"],
     "subtitle":"Source: IOC and World Bank",
