@@ -14,8 +14,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/RDeconomist/observatory/main/Green_CarbonPerCapita.csv"
   },
-  "height": 300,
-  "width": 300,
+  "height": 400,
+  "width": 450,
   "mark": "line",
   "encoding": {
     "x": {"field": "Time", "type": "temporal", "title": "", "axis": {"grid": false}},
