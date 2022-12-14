@@ -1,7 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 300,
-  "height": 300,
   "title": {
     "text": ["CO2 emissions per capita versus GDP per capita"],
     "subtitle": "Source: Our World in Data (2018 data)",
