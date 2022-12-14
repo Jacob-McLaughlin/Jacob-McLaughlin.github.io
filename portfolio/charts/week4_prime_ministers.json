@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": "white",
   "padding": 5,
-  "width": 260,
-  "height": 300,
+  "width": 450,
+  "height": 400,
   "title": {
     "text": "Longest Serving UK Prime Ministers",
     "subtitle": "The 25 longest serving PMs and their tenure in years. Source: Wikipedia",
