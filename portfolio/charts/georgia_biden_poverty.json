@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": "white",
   "padding": 5,
-  "width": 450,
-  "height": 400,
+  "width": 300,
+  "height": 280,
   "title": {
     "text": [
       "Percentage Votes for Joe Biden in 2020 versus",
