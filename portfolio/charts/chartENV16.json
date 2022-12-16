@@ -18,8 +18,8 @@
         "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/data/chartENV16.csv"},
   
     
-    "height": 400,
-    "width": 450,
+    "height": 300,
+    "width": 280,
     
     "mark": {
       "type": "bar",
