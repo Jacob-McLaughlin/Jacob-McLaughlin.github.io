@@ -21,33 +21,3 @@ h1, h3, p{
     border-radius: 5px;
     border-color: white;
 }
-.container_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 3px;
-  justify-content: center;
-  vertical-align: bottom;
-  text-align: center;
-  align-content: center;
-  max-width: 90%;
-  margin:auto;
-  max-width: 600px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-
-}
-
-.chart_grid {
-  background-color: white;
-  border-style: solid;
-  border-color: grey;
-  border-width: .2em;
-  border-radius: .5em;
-  height: 150px;
-  min-width: 100%;
-  text-align: center;
-  padding: 0.2em !important;
-  margin-left: 0px;
-
-}
