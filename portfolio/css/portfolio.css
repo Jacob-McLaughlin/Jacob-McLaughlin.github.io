@@ -3,7 +3,7 @@
 
 body{
     background-color: #ccff00;
-      max-width: 600px;
+      max-width: 900px;
     margin: auto;
     overflow: auto;
 }
@@ -21,3 +21,4 @@ h1, h3, p{
     border-radius: 5px;
     border-color: white;
 }
+ 
