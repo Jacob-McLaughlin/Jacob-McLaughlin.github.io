@@ -10,8 +10,8 @@
   
   "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/IMFLending_Adjusted.csv"},
   
-  "height": 400,
-  "width": 450,
+  "height": 300,
+  "width": 280,
 
   "mark": {
     "type": "bar",
