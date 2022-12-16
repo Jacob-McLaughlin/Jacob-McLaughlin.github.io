@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Title for the page -->
+    <!-- Create title -->
     <title>Portfolio</title>
 
-    <!-- Link to my style sheet -->
+    <!-- Link css -->
     <link rel="stylesheet" href="portfolio/css/portfolio.css">
 
     <!--The next three lines allow the Vega embed-->
@@ -20,96 +20,90 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 </head>
 
-
-
 <body>
-<ul>
-    <li><a href="index.html">home</a></li>
-    <li><a href="project.html">project</a></li>
-    <li><a href="portfolio.html">portfolio</a></li>
-    <li><a href=https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io>GitHub</a></li>
-</ul>
-    <h1>Data Science Portfolio</h1>
-    <div class="myWeek1">
+<h1>Data Science Portfolio</h1>
+<h3> By Jacob McLaughlin</h3>
+<div class="wrap">
+    <p class="rubric-launch">You can go back to the home page <a class="textLink" href="index"> here</a>.</p> 
+  </div>
+   <div class="wrap">
+    <p class="rubric-launch">You can go back to my project <a class="textLink" href="project"> here</a>.</p> 
+  </div>
 
-        <h2> Week 1</h2>
-        
-        <h3>CO2 Emissions</h3>
-        <p>This chart shows Carbon per capita by country.</p>
-        <div class="chart" id="Chart1"></div>
+<!--Week 1-->
+<h3> Week 1 </h3>
+<p> The task this week was to embed two charts.</p>
+<p>This chart shows Carbon per capita by country.</p>
+<div class="chart" id="Chart1"></div>
+<p>This chart shows the top 20 California wildfires by size.</p>
+<div class="chart" id="Chart2"> </div>
 
-        <h3>Wild Fires</h3>
-        <p>This chart shows the top 20 California wildfires by size.</p>
-        <div class="chart" id="Chart2"> </div>
-    </div> 
-    <div class="myWeek2">
-        <h2> Week 2</h2>
-        <p> This chart shows data for IMF lending. </p>
-        <div class="chart" id ="Chart3"></div>
-        <p> This chart shows data for IMF lending, adjusted for GDP. </p>
-        <div class="chart" id="Chart4"></div>
-        <p> The chart shows the IMF lent the most as a proportion of GDP in 1984, suggesting this was a riskier year to invest than 2022. </p>
-    </div>
-    <div class="myWeek3">       
-        <h2> Week 3</h2>
-        <p> The chart below shows data for the unemployment rate in the USA taken from FRED. This data is encoded inline into VegaLite, after being imported and edited in Python.  </p>
-        <div class="chart" id ="Chart5"></div>
-        <p> The chart below shows the same data but with the visual encoding changed, and the data now represented as a line chart. </p>
-        <div class="chart" id ="Chart6"></div>
-        <p> As the data is a time series, changing the visual encoding to a line chart makes it easier to see small changes year-on-year and long-term trends.</p>
-    </div>
-    <div class="myWeek4">
-        <h2> Week 4</h2>
-        <p>I scraped data from Wikipedia to create a chart showing the longest-serving Prime Ministers of the UK. The Google Colab notebook used to scrape and clean the data can be found <a href = "https://colab.research.google.com/drive/1SL6gWebgtyVuv9k1po0mzr0wr06kUSuN?usp=sharingl">here</a>.</p>
-        <p> A chart showing the 25 longest serving Prime Ministers of the UK is shown below. </p>
-        <div class="chart" id="Chart7"></div>
-        <p> I chose to scrape Wikipedia as it has a wide range of data and as the formatting of the data (tenure given in years and days) presented an interesting challenge. </p>
-    </div>
-    <div class="myWeek5">
-        <h2>Week 5</h2> 
-        <p> I used the ONS API to create a dashboard of time series all relating to economic inactivity in the UK. </p>
-        <div class="grid_items">
-            <div class="grid_item" id="Chart8"></div><div class="grid_item" id="Chart9"></div><div class="grid_item" id="Chart10"></div>
-            <div class="grid_item" id="Chart11"></div><div class="grid_item" id="Chart12"></div><div class="grid_item" id="Chart13"></div>
-            <div class="grid_item" id="Chart14"></div><div class="grid_item" id="Chart15"></div><div class="grid_item" id="Chart16"></div>
-        </div>
-        <p> The Google Colab notebook used to obtain data from the API can be found <a href = "https://colab.research.google.com/drive/1w5ocU0GOo_LJkR_QAjCLjKjDpTgiNYwJ?usp=sharing">here</a>. </p>
-    </div>
-    <div class="myWeek6">
-        <h2> Week 6</h2>
-        <p> Week 6 is reading week - no task. </p>
-    </div>
-    <div class="myWeek7">
-        <h2> Week 7</h2>
-        <p> The map below is a map showing all of the counties of the US State of Georgia. </p>
-        <div class="chart" id="Chart17"></div>
-        <p> The chart below shows the same map of the US State of Georgia, but adapted to be a chloropleth map showing the poverty rates of the various counties. </p>
-        <div class="chart" id="Chart18"></div>
-        <p> The map shows poverty rates vary across the state, with pockets of lower poverty in the North-West and areas of higher poverty in the South-West.</p>
-    </div>
-    <div class="myWeek8">
-        <h2> Week 8</h2>
-        <p>At the Festival of Economics, Alessio Terzi claimed that CO2 emissions and economic growth intrinsically linked, both historically and in the modern-day.</p>
-        <p> The chart below plots CO2 emissions per capita against GDP per capita for different countries. </p>
-        <div class="widechart" id="wideChart1"></div>
-        <p> The chart below plots the percentage increase in CO2 emissions per capita and GDP per capita for the UK since their respective values in 1800. </p>
-        <div class="chart" id="Chart20"></div>
-        <p> The first chart supports the claim, since it shows countries with higher GDPs tend to have higher CO2 emissions.</p>
-        <p> The second chart refutes the claim, since CO2 emissions per capita have fallen significantly since 1970 in the UK, but the economy has continued to grow. </p>
-    </div>
-    <div class="myWeek9">
-        <h2> Week 9</h2>
-        <p> The two charts in this section use advanced analytics.</p>
-        <p> The chart below is a scatter plot including a regression line drawn using the Vega editor. </p>
-        <div class="chart" id="Chart21"></div>
-        <p> The chart below is a bubble plot.
-        <div class="chart" id="Chart22"></div>
-    </div>
-    <div class="myWeek10">
-        <h2> Week 10 and Week 11</h2>
-        <p> This task requires conducting applied data analysis using machine learning techniques. </p>
-    </div>
-</body>
+<!--Week 2-->
+<h3> Week 2 </h3>
+<p> This chart shows data for IMF lending. </p>
+<div class="chart" id ="Chart3"></div>
+<p> This chart shows data for IMF lending, adjusted for GDP. </p>
+<div class="chart" id="Chart4"></div>
+<p> The chart shows the IMF lent the most as a proportion of GDP in 1984, suggesting this was a riskier year to invest than 2022. </p>
+
+<!--Week 3-->
+<h3> Week 3</h3>
+<p> The chart below shows data for the unemployment rate in the USA taken from FRED. This data is encoded inline into VegaLite, after being imported and edited in Python.  </p>
+<div class="chart" id ="Chart5"></div>
+<p> The chart below shows the same data but with the visual encoding changed, and the data now represented as a line chart. </p>
+<div class="chart" id ="Chart6"></div>
+<p> As the data is a time series, changing the visual encoding to a line chart makes it easier to see small changes year-on-year and long-term trends.</p>
+
+<!--Week 4-->
+<h3> Week 4</h3>
+<p>I scraped data from Wikipedia to create a chart showing the longest-serving Prime Ministers of the UK. The Google Colab notebook used to scrape and clean the data can be found  <a class="textLink" href="https://colab.research.google.com/drive/1SL6gWebgtyVuv9k1po0mzr0wr06kUSuN?usp=sharingl"> here</a></p>
+<p> A chart showing the 25 longest serving Prime Ministers of the UK is shown below. </p>
+<div class="chart" id="Chart7"></div>
+<p> I chose to scrape Wikipedia as it has a wide range of data and as the formatting of the data (tenure given in years and days) presented an interesting challenge. </p>
+
+<!--Week 5-->
+<h3>Week 5</h3> 
+<p> I used the ONS API to create a dashboard of time series all relating to economic inactivity in the UK. </p>
+<div class="grid_items">
+    <div class="grid_item" id="Chart8"></div><div class="grid_item" id="Chart9"></div><div class="grid_item" id="Chart10"></div>
+    <div class="grid_item" id="Chart11"></div><div class="grid_item" id="Chart12"></div><div class="grid_item" id="Chart13"></div>
+    <div class="grid_item" id="Chart14"></div><div class="grid_item" id="Chart15"></div><div class="grid_item" id="Chart16"></div>
+</div>
+<p> The Google Colab notebook used to obtain data from the API can be found <a class="textLink" href="https://colab.research.google.com/drive/1w5ocU0GOo_LJkR_QAjCLjKjDpTgiNYwJ?usp=sharing"> here</a>.</p>
+
+<!--Week 6-->
+<h3> Week 6</h3>
+<p> Week 6 is reading week - no task. </p>
+
+<!--Week 7-->
+<h3> Week 7</h3>
+<p> The map below is a map showing all of the counties of the US State of Georgia. </p>
+<div class="chart" id="Chart17"></div>
+<p> The chart below shows the same map of the US State of Georgia, but adapted to be a chloropleth map showing the poverty rates of the various counties. </p>
+<div class="chart" id="Chart18"></div>
+<p> The map shows poverty rates vary across the state, with pockets of lower poverty in the North-West and areas of higher poverty in the South-West.</p>
+
+<!--Week 8-->
+<h3> Week 8</h3>
+<p>At the Festival of Economics, Alessio Terzi claimed that CO2 emissions and economic growth intrinsically linked, both historically and in the modern-day.</p>
+<p> The chart below plots CO2 emissions per capita against GDP per capita for different countries. </p>
+<div class="chart" id="Chart19"></div>
+<p> The chart below plots the percentage increase in CO2 emissions per capita and GDP per capita for the UK since their respective values in 1800. </p>
+<div class="chart" id="Chart20"></div>
+<p> The first chart supports the claim, since it shows countries with higher GDPs tend to have higher CO2 emissions.</p>
+<p> The second chart refutes the claim, since CO2 emissions per capita have fallen significantly since 1970 in the UK, but the economy has continued to grow. </p>
+
+<!--Week 9-->
+<h3> Week 9</h3>
+<p> The two charts in this section use advanced analytics.</p>
+<p> The chart below is a scatter plot including a regression line drawn using the Vega editor. </p>
+<div class="chart" id="Chart21"></div>
+<p> The chart below is a bubble plot.
+<div class="chart" id="Chart22"></div>
+
+<!--Week 10-->
+<h3> Week 10 and Week 11</h3>
+<p> This task requires conducting applied data analysis using machine learning techniques. </p>
 
 
 <script>
@@ -157,11 +151,11 @@
     vegaEmbed('#Chart16', myChart16);
     vegaEmbed('#Chart17', myChart17);
     vegaEmbed('#Chart18', myChart18);
-    vegaEmbed('#wideChart1', myChart19);
+    vegaEmbed('#Chart19', myChart19);
     vegaEmbed('#Chart20', myChart20);
     vegaEmbed('#Chart21', myChart21);
     vegaEmbed('#Chart22', myChart22);
 
 </script>
-
+</body>
 </html>
