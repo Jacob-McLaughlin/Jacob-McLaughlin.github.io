@@ -1,7 +1,7 @@
 {"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "title": {
-      "text": ["Economic Inactivity Rate:", "UK All Aged 16-64"],
+      "text": ["Economic Inactivity Rate:", "UK (16-64)"],
       "subtitle":"(%) from 1971-2022. Source: ONS",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
