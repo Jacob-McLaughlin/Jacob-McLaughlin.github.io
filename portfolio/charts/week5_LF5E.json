@@ -2,9 +2,10 @@
 
   "title": {
       "text": ["Economic Inactivity Rate:", "East England (16-64)"],
+      "fontSize": 10,
       "subtitle":"(%) from 1992-2022. Source: ONS",
       "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
+      "subtitleFontSize":8,
       "anchor": "start",
       "color": "black"},
   
