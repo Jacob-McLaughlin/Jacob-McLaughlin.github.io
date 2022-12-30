@@ -1,7 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 300,
-  "height": 280,
    "title": {
       "text": "A Map Showing Poverty in Georgia, USA",
       "subtitle":["All counties of the State of Georgia and their Poverty Rates in 2020, Sources- Github of deldersveld, USDA"],
