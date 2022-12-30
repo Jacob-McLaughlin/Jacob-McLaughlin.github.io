@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 300,
+  "title": {
+    "text": "A Map Showing the Total Spent on Districts in 2020",
+    "subtitle": [
+      "Sources - OpenSecrets, Github of deldersveld"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitlePadding": 5,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/deldersveld_adapted_congress_2015",
+    "format": {"type": "topojson", "feature": "cb_2015_us_cd114_20m"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.GEOID",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_2020.csv"
+        },
+        "key": "Seat",
+        "fields": ["Total_Raised_Mill"]
+      }
+    }
+  ],
+  "projection": {"type": "albersUsa"},
+  "mark": "geoshape",
+  "encoding": {
+    "color": {"field": "Total_Raised_Mill", "type": "quantitative", "title": "Total Spent (Million $)"},
+    "tooltip": [
+      {"field": "properties.GEOID", "type": "nominal", "title": "County"},
+      {"field": "Total_Raised_Mill", "title": "Total Spent (Million $)"}
+    ]
+  }
+}
