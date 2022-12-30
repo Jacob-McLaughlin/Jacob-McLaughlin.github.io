@@ -3,7 +3,7 @@
   "width": 500,
   "height": 300,
   "title": {
-    "text": "A Map Showing the Total Spent on Districts in 2020",
+    "text": "A Map Showing the Total Spent on House Districts in 2020",
     "subtitle": [
       "Sources - OpenSecrets, Github of deldersveld"
     ],
