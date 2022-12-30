@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 300,
    "title": {
       "text": "A Map Showing Poverty in Georgia, USA",
       "subtitle":["All counties of the State of Georgia and their Poverty Rates in 2020, Sources- Github of deldersveld, USDA"],
@@ -30,6 +32,7 @@
   "encoding":{
     "color":{
       "field":"PCTPOVALL_2020",
+      "title": "Poverty Rate (%)",
       "type":"quantitative"
     },
     "tooltip":[
