@@ -1,0 +1,105 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "white",
+    "title": {
+      "text": [
+        "Vote Share versus Proportion of Money",
+        "Raised/Spent for 2020 House Candidates"
+      ],
+      "subtitle": "Source: OpenSecrets and Politico",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/house_2020_results_and_finances_final.csv"},
+    "vconcat": [
+      {
+        "layer": [
+        {
+          "mark": {"type": "point", "color": "orange", "filled": true, "tooltip": {"content": "data"}},
+          "encoding": {
+            "x": {"field": "Percent_Spent", "type": "quantitative", "scale": {"domain": [0, 100]}},
+            "y": {"field": "Percent_Votes", "type": "quantitative"}
+          }
+        },
+        {
+          "mark": {"type": "line", "color": "firebrick"},
+          "transform": [
+            {"regression": "Percent_Votes", "on": "Percent_Spent", "extent": [0,100],
+    },
+          ],
+          "encoding": {
+            "x": {"field": "Percent_Spent", "type": "quantitative", "title": "Proportion Spent in District (%)"},
+            "y": {"field": "Percent_Votes", "type": "quantitative", "title": "Vote Share (%)"},
+          }
+        },
+        {
+          "transform": [
+            {
+              "regression": "Percent_Votes",
+              "on": "Percent_Spent",
+              "params": true
+            },
+            {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+          ],
+          "mark": {
+            "type": "text",
+            "color": "black",
+            "x": "width",
+            "align": "right",
+            "y": -5
+          },
+          "encoding": {"text": {"type": "nominal", "field": "R2"}}
+        }
+      ]
+      },
+  
+  
+  
+  
+  
+  
+  
+      {
+        "layer": [
+      {
+        "mark": {"type": "point", "color": "orange", "filled": true, "tooltip": {"content": "data"}},
+        "encoding": {
+          "x": {"field": "Percent_Raised", "type": "quantitative", "scale": {"domain": [0, 100]}},
+          "y": {"field": "Percent_Votes", "type": "quantitative"}
+        }
+      },
+      {
+        "mark": {"type": "line", "color": "firebrick"},
+        "transform": [
+          {"regression": "Percent_Votes", "on": "Percent_Raised", "extent": [0,100],
+  },
+        ],
+        "encoding": {
+          "x": {"field": "Percent_Raised", "type": "quantitative", "title": "Proportion Raised in District (%)"},
+          "y": {"field": "Percent_Votes", "type": "quantitative", "title": "Vote Share (%)"},
+        }
+      },
+      {
+        "transform": [
+          {
+            "regression": "Percent_Votes",
+            "on": "Percent_Raised",
+            "params": true
+          },
+          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+        ],
+        "mark": {
+          "type": "text",
+          "color": "black",
+          "x": "width",
+          "align": "right",
+          "y": -5
+        },
+        "encoding": {"text": {"type": "nominal", "field": "R2"}}
+      }
+    ]
+      }
+    ]
+  }
