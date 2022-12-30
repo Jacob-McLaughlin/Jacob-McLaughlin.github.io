@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": [
+        "Margin of Victory Versus Total Spent",
+        "On House Districts in 2020"
+      ],
+      "subtitle": "Source: OpenSecrets and Politico",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_2020.csv"},
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "color": "blue",
+        "filled": true,
+        "tooltip": {"content": "data"}
+      },
+      "encoding": {
+        "x": {
+          "field": "Total_Spent_Mill",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Margin",
+          "type": "quantitative",
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "firebrick",
+      },
+      "transform": [
+        {
+          "regression": "Margin",
+          "on": "Total_Spent_Mill",
+          "extent": [0,18.6]
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Total_Spent_Mill",
+          "type": "quantitative",
+          "title": "Total Spent on District (Million $)"
+        },
+        "y": {
+          "field": "Margin",
+          "type": "quantitative",
+          "title": "Margin of Victory (% points)"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Margin",
+          "on": "Total_Spent_Mill",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}
