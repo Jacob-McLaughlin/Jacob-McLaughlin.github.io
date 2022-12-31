@@ -48,4 +48,4 @@ for year in years:
       amount_spent = secrets_page[0].iloc[j][2]
       row = pd.DataFrame([{'Seat': code, 'Candidate': short_name, 'Party': party, 'Raised': amount_raised, 'Spent': amount_spent, 'Winner': winner, 'Incumbent': incumbent}])
       house_finances = pd.concat([house_finances, row]) 
-house_finances.to_csv("2020_house_finances_open_secrets.csv")
+house_finances.to_csv("house_finances_2020_open_secrets.csv")
