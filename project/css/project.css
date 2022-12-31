@@ -24,6 +24,15 @@ h2{
     text-align: center;
 }
 
+.chart{
+    background-color: white;
+    width:400px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+}
+
 
 /* Hyperlinks */
 a:link {
