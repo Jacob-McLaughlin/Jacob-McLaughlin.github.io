@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-#This code snippet combines both the dataset showing the results of the 2020 House Elections and the dataset showing their finances
+#This code snippet combines the politico dataset showing the results of the 2020 House Elections and the scraped OpenSecrets dataset showing their finances
 #Ensuring that the candidate's names are in the same format, and removing data points where we don't have both results and finances data
 results_df = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/politico_results_2020_recoded.csv")
 finances_df = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/2020_house_finances_open_secrets.csv")
