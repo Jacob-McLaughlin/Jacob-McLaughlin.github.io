@@ -1,105 +1,399 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "background": "white",
-    "title": {
-      "text": [
-        "Vote Share versus Proportion of Money",
-        "Raised/Spent for 2020 House Candidates"
-      ],
-      "subtitle": "Source: OpenSecrets and Politico",
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
-      "anchor": "start",
-      "color": "black"
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 200,
+  "title": {
+    "text": [
+      "Vote Share versus Proportion of Money",
+      "Raised/Spent for 2020 House Candidates"
+    ],
+    "subtitle": "Source: OpenSecrets and Politico",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/house_2020_results_and_finances_final.csv",
+      "format": {"type": "csv"}
     },
-    "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/house_2020_results_and_finances_final.csv"},
-    "vconcat": [
-      {
-        "layer": [
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
         {
-          "mark": {"type": "point", "color": "orange", "filled": true, "tooltip": {"content": "data"}},
-          "encoding": {
-            "x": {"field": "Percent_Spent", "type": "quantitative", "scale": {"domain": [0, 100]}},
-            "y": {"field": "Percent_Votes", "type": "quantitative"}
-          }
-        },
-        {
-          "mark": {"type": "line", "color": "firebrick"},
-          "transform": [
-            {"regression": "Percent_Votes", "on": "Percent_Spent", "extent": [0,100],
-    },
-          ],
-          "encoding": {
-            "x": {"field": "Percent_Spent", "type": "quantitative", "title": "Proportion Spent in District (%)"},
-            "y": {"field": "Percent_Votes", "type": "quantitative", "title": "Vote Share (%)"},
-          }
-        },
-        {
-          "transform": [
-            {
-              "regression": "Percent_Votes",
-              "on": "Percent_Spent",
-              "params": true
-            },
-            {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
-          ],
-          "mark": {
-            "type": "text",
-            "color": "black",
-            "x": "width",
-            "align": "right",
-            "y": -5
-          },
-          "encoding": {"text": {"type": "nominal", "field": "R2"}}
+          "type": "filter",
+          "expr": "isValid(datum[\"Percent_Spent\"]) && isFinite(+datum[\"Percent_Spent\"]) && isValid(datum[\"Percent_Votes\"]) && isFinite(+datum[\"Percent_Votes\"])"
         }
       ]
-      },
-  
-  
-  
-  
-  
-  
-  
-      {
-        "layer": [
-      {
-        "mark": {"type": "point", "color": "orange", "filled": true, "tooltip": {"content": "data"}},
-        "encoding": {
-          "x": {"field": "Percent_Raised", "type": "quantitative", "scale": {"domain": [0, 100]}},
-          "y": {"field": "Percent_Votes", "type": "quantitative"}
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Percent_Spent",
+          "y": "Percent_Votes",
+          "extent": [0, 100],
+          "as": ["Percent_Spent", "Percent_Votes"]
         }
-      },
-      {
-        "mark": {"type": "line", "color": "firebrick"},
-        "transform": [
-          {"regression": "Percent_Votes", "on": "Percent_Raised", "extent": [0,100],
-  },
-        ],
-        "encoding": {
-          "x": {"field": "Percent_Raised", "type": "quantitative", "title": "Proportion Raised in District (%)"},
-          "y": {"field": "Percent_Votes", "type": "quantitative", "title": "Vote Share (%)"},
-        }
-      },
-      {
-        "transform": [
-          {
-            "regression": "Percent_Votes",
-            "on": "Percent_Raised",
-            "params": true
-          },
-          {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
-        ],
-        "mark": {
-          "type": "text",
-          "color": "black",
-          "x": "width",
-          "align": "right",
-          "y": -5
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Percent_Spent",
+          "y": "Percent_Votes",
+          "params": true,
+          "as": ["Percent_Spent", "Percent_Votes"]
         },
-        "encoding": {"text": {"type": "nominal", "field": "R2"}}
-      }
-    ]
-      }
-    ]
-  }
+        {
+          "type": "formula",
+          "expr": "'R²: '+format(datum.rSquared, '.2f')",
+          "as": "R2"
+        }
+      ]
+    },
+    {
+      "name": "data_3",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Percent_Raised\"]) && isFinite(+datum[\"Percent_Raised\"]) && isValid(datum[\"Percent_Votes\"]) && isFinite(+datum[\"Percent_Votes\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_4",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Percent_Raised",
+          "y": "Percent_Votes",
+          "extent": [0, 100],
+          "as": ["Percent_Raised", "Percent_Votes"]
+        }
+      ]
+    },
+    {
+      "name": "data_5",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Percent_Raised",
+          "y": "Percent_Votes",
+          "params": true,
+          "as": ["Percent_Raised", "Percent_Votes"]
+        },
+        {
+          "type": "formula",
+          "expr": "'R²: '+format(datum.rSquared, '.2f')",
+          "as": "R2"
+        }
+      ]
+    }
+  ],
+  "signals": [{"name": "childHeight", "value": 200}],
+  "layout": {"padding": 20, "columns": 1, "bounds": "full", "align": "each"},
+  "marks": [
+    {
+      "type": "group",
+      "name": "concat_0_group",
+      "style": "cell",
+      "encode": {
+        "update": {
+          "width": {"signal": "width"},
+          "height": {"signal": "childHeight"}
+        }
+      },
+      "marks": [
+        {
+          "name": "concat_0_layer_0_marks",
+          "type": "symbol",
+          "style": ["point"],
+          "from": {"data": "data_0"},
+          "encode": {
+            "update": {
+              "opacity": {"value": 0.7},
+              "tooltip": {"signal": "datum"},
+              "fill": {"value": "orange"},
+              "ariaRoleDescription": {"value": "point"},
+              "description": {
+                "signal": "\"Percent_Spent: \" + (format(datum[\"Percent_Spent\"], \"\")) + \"; Percent_Votes: \" + (format(datum[\"Percent_Votes\"], \"\"))"
+              },
+              "x": {"scale": "concat_0_x", "field": "Percent_Spent"},
+              "y": {"scale": "concat_0_y", "field": "Percent_Votes"}
+            }
+          }
+        },
+        {
+          "name": "concat_0_layer_1_marks",
+          "type": "line",
+          "style": ["line"],
+          "sort": {"field": "datum[\"Percent_Spent\"]"},
+          "from": {"data": "data_1"},
+          "encode": {
+            "update": {
+              "stroke": {"value": "firebrick"},
+              "description": {
+                "signal": "\"Proportion Spent in District (%): \" + (format(datum[\"Percent_Spent\"], \"\")) + \"; Vote Share (%): \" + (format(datum[\"Percent_Votes\"], \"\"))"
+              },
+              "x": {"scale": "concat_0_x", "field": "Percent_Spent"},
+              "y": {"scale": "concat_0_y", "field": "Percent_Votes"},
+              "defined": {
+                "signal": "isValid(datum[\"Percent_Spent\"]) && isFinite(+datum[\"Percent_Spent\"]) && isValid(datum[\"Percent_Votes\"]) && isFinite(+datum[\"Percent_Votes\"])"
+              }
+            }
+          }
+        },
+        {
+          "name": "concat_0_layer_2_marks",
+          "type": "text",
+          "style": ["text"],
+          "from": {"data": "data_2"},
+          "encode": {
+            "update": {
+              "align": {"value": "right"},
+              "fill": {"value": "black"},
+              "description": {
+                "signal": "\"R2: \" + (isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"])"
+              },
+              "x": {"field": {"group": "width"}},
+              "y": {"value": -5},
+              "text": {
+                "signal": "isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"]"
+              },
+              "baseline": {"value": "middle"}
+            }
+          }
+        }
+      ],
+      "axes": [
+        {
+          "scale": "concat_0_x",
+          "orient": "bottom",
+          "gridScale": "concat_0_y",
+          "grid": true,
+          "tickCount": {"signal": "ceil(width/40)"},
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_0_y",
+          "orient": "left",
+          "gridScale": "concat_0_x",
+          "grid": true,
+          "tickCount": {"signal": "ceil(childHeight/40)"},
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_0_x",
+          "orient": "bottom",
+          "grid": false,
+          "title": "Proportion Spent in District (%)",
+          "labelFlush": true,
+          "labelOverlap": true,
+          "tickCount": {"signal": "ceil(width/40)"},
+          "zindex": 0
+        },
+        {
+          "scale": "concat_0_y",
+          "orient": "left",
+          "grid": false,
+          "title": "Vote Share (%)",
+          "labelOverlap": true,
+          "tickCount": {"signal": "ceil(childHeight/40)"},
+          "zindex": 0
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "concat_1_group",
+      "style": "cell",
+      "encode": {
+        "update": {
+          "width": {"signal": "width"},
+          "height": {"signal": "childHeight"}
+        }
+      },
+      "marks": [
+        {
+          "name": "concat_1_layer_0_marks",
+          "type": "symbol",
+          "style": ["point"],
+          "from": {"data": "data_3"},
+          "encode": {
+            "update": {
+              "opacity": {"value": 0.7},
+              "tooltip": {"signal": "datum"},
+              "fill": {"value": "orange"},
+              "ariaRoleDescription": {"value": "point"},
+              "description": {
+                "signal": "\"Percent_Raised: \" + (format(datum[\"Percent_Raised\"], \"\")) + \"; Percent_Votes: \" + (format(datum[\"Percent_Votes\"], \"\"))"
+              },
+              "x": {"scale": "concat_1_x", "field": "Percent_Raised"},
+              "y": {"scale": "concat_1_y", "field": "Percent_Votes"}
+            }
+          }
+        },
+        {
+          "name": "concat_1_layer_1_marks",
+          "type": "line",
+          "style": ["line"],
+          "sort": {"field": "datum[\"Percent_Raised\"]"},
+          "from": {"data": "data_4"},
+          "encode": {
+            "update": {
+              "stroke": {"value": "firebrick"},
+              "description": {
+                "signal": "\"Proportion Raised in District (%): \" + (format(datum[\"Percent_Raised\"], \"\")) + \"; Vote Share (%): \" + (format(datum[\"Percent_Votes\"], \"\"))"
+              },
+              "x": {"scale": "concat_1_x", "field": "Percent_Raised"},
+              "y": {"scale": "concat_1_y", "field": "Percent_Votes"},
+              "defined": {
+                "signal": "isValid(datum[\"Percent_Raised\"]) && isFinite(+datum[\"Percent_Raised\"]) && isValid(datum[\"Percent_Votes\"]) && isFinite(+datum[\"Percent_Votes\"])"
+              }
+            }
+          }
+        },
+        {
+          "name": "concat_1_layer_2_marks",
+          "type": "text",
+          "style": ["text"],
+          "from": {"data": "data_5"},
+          "encode": {
+            "update": {
+              "align": {"value": "right"},
+              "fill": {"value": "black"},
+              "description": {
+                "signal": "\"R2: \" + (isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"])"
+              },
+              "x": {"field": {"group": "width"}},
+              "y": {"value": -5},
+              "text": {
+                "signal": "isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"]"
+              },
+              "baseline": {"value": "middle"}
+            }
+          }
+        }
+      ],
+      "axes": [
+        {
+          "scale": "concat_1_x",
+          "orient": "bottom",
+          "gridScale": "concat_1_y",
+          "grid": true,
+          "tickCount": {"signal": "ceil(width/40)"},
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_1_y",
+          "orient": "left",
+          "gridScale": "concat_1_x",
+          "grid": true,
+          "tickCount": {"signal": "ceil(childHeight/40)"},
+          "domain": false,
+          "labels": false,
+          "aria": false,
+          "maxExtent": 0,
+          "minExtent": 0,
+          "ticks": false,
+          "zindex": 0
+        },
+        {
+          "scale": "concat_1_x",
+          "orient": "bottom",
+          "grid": false,
+          "title": "Proportion Raised in District (%)",
+          "labelFlush": true,
+          "labelOverlap": true,
+          "tickCount": {"signal": "ceil(width/40)"},
+          "zindex": 0
+        },
+        {
+          "scale": "concat_1_y",
+          "orient": "left",
+          "grid": false,
+          "title": "Vote Share (%)",
+          "labelOverlap": true,
+          "tickCount": {"signal": "ceil(childHeight/40)"},
+          "zindex": 0
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "concat_0_x",
+      "type": "linear",
+      "domain": [0, 100],
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_0_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Percent_Votes"},
+          {"data": "data_1", "field": "Percent_Votes"}
+        ]
+      },
+      "range": [{"signal": "childHeight"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_1_x",
+      "type": "linear",
+      "domain": [0, 100],
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_1_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_3", "field": "Percent_Votes"},
+          {"data": "data_4", "field": "Percent_Votes"}
+        ]
+      },
+      "range": [{"signal": "childHeight"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "config": {}
+}
