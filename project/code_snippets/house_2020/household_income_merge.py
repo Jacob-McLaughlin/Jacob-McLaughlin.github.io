@@ -6,9 +6,6 @@ import pandas as pd
 total_df = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_2020.csv")
 census_df = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/census_household_income_2019.csv")
 states_df = pd.read_csv("https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/US_state_list.csv")
-#Turn the list of states and their codes into a dictionary to make it easier to reference
-#states_df = states_df.set_index("State")
-#states_dict = states_df.to_dict()
 states_list = states_df["State"].tolist()
 codes_list = states_df["state_po"].tolist()
 states_dict = dict(zip(states_list, codes_list))
