@@ -11,13 +11,14 @@
         <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-
+     <title>Campaign Finance</title>    
 </head>
 <body>
     <h1> How does campaign finance spending affect elections to the US House of Representatives? </h1>
     <h2> Aims </h2>
-    <p> I scraped data from politico (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_scraping.py) to get data on 2020 election outcomes for house seats. </p>
-    <p> I then scraped data from OpenSecrets (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/open_secrets_scraping.py) to get financial data for house seats in the 2020 election. </p>
+    <p> I scraped data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_scraping.py">Politico</a>
+        to get on 2020 election outcomes. I then scraped data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/open_secrets_scraping.py">OpenSecrets</a>
+        to get financial data for house seats in the 2020 election. </p>        
     <p> I then merged and cleaned this data (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_open_secrets_merge_clean.py) to create this dataset (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_results_and_finances_final.csv) </p>
     <p> We then plot graphs showing correlation between amount spent and vote share. </p>
     <p> We then consider the total spent on each seat. </p>
