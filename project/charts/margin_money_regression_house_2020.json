@@ -1,80 +1,207 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": [
-        "Margin of Victory Versus Total Spent",
-        "On House Districts in 2020"
-      ],
-      "subtitle": "Source: OpenSecrets and Politico",
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
-      "anchor": "start",
-      "color": "black"
-    },
-    "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_2020.csv"},
-  "layer": [
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 200,
+  "height": 200,
+  "title": {
+    "text": [
+      "Margin of Victory Versus Total Spent",
+      "On House Districts in 2020"
+    ],
+    "subtitle": "Source: OpenSecrets and Politico",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "style": "cell",
+  "data": [
     {
-      "mark": {
-        "type": "point",
-        "color": "blue",
-        "filled": true,
-        "tooltip": {"content": "data"}
-      },
-      "encoding": {
-        "x": {
-          "field": "Total_Spent_Mill",
-          "type": "quantitative"
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_2020.csv",
+      "format": {"type": "csv", "delimiter": ","}
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Total_Spent_Mill\"]) && isFinite(+datum[\"Total_Spent_Mill\"]) && isValid(datum[\"Margin\"]) && isFinite(+datum[\"Margin\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Total_Spent_Mill",
+          "y": "Margin",
+          "extent": [0, 18.6],
+          "as": ["Total_Spent_Mill", "Margin"]
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Total_Spent_Mill",
+          "y": "Margin",
+          "params": true,
+          "as": ["Total_Spent_Mill", "Margin"]
         },
-        "y": {
-          "field": "Margin",
-          "type": "quantitative",
+        {
+          "type": "formula",
+          "expr": "'R²: '+format(datum.rSquared, '.2f')",
+          "as": "R2"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "symbol",
+      "style": ["point"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.7},
+          "tooltip": {"signal": "datum"},
+          "fill": {"value": "blue"},
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"Total_Spent_Mill: \" + (format(datum[\"Total_Spent_Mill\"], \"\")) + \"; Margin: \" + (format(datum[\"Margin\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "Total_Spent_Mill"},
+          "y": {"scale": "y", "field": "Margin"}
         }
       }
     },
     {
-      "mark": {
-        "type": "line",
-        "color": "firebrick",
-      },
-      "transform": [
-        {
-          "regression": "Margin",
-          "on": "Total_Spent_Mill",
-          "extent": [0,18.6]
-        }
-      ],
-      "encoding": {
-        "x": {
-          "field": "Total_Spent_Mill",
-          "type": "quantitative",
-          "title": "Total Spent on District (Million $)"
-        },
-        "y": {
-          "field": "Margin",
-          "type": "quantitative",
-          "title": "Margin of Victory (% points)"
+      "name": "layer_1_marks",
+      "type": "line",
+      "style": ["line"],
+      "sort": {"field": "datum[\"Total_Spent_Mill\"]"},
+      "from": {"data": "data_1"},
+      "encode": {
+        "update": {
+          "stroke": {"value": "firebrick"},
+          "description": {
+            "signal": "\"Total Spent on District (Million $): \" + (format(datum[\"Total_Spent_Mill\"], \"\")) + \"; Margin of Victory (% points): \" + (format(datum[\"Margin\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "Total_Spent_Mill"},
+          "y": {"scale": "y", "field": "Margin"},
+          "defined": {
+            "signal": "isValid(datum[\"Total_Spent_Mill\"]) && isFinite(+datum[\"Total_Spent_Mill\"]) && isValid(datum[\"Margin\"]) && isFinite(+datum[\"Margin\"])"
+          }
         }
       }
     },
     {
-      "transform": [
-        {
-          "regression": "Margin",
-          "on": "Total_Spent_Mill",
-          "params": true
-        },
-        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
-      ],
-      "mark": {
-        "type": "text",
-        "color": "firebrick",
-        "x": "width",
-        "align": "right",
-        "y": -5
-      },
-      "encoding": {
-        "text": {"type": "nominal", "field": "R2"}
+      "name": "layer_2_marks",
+      "type": "text",
+      "style": ["text"],
+      "from": {"data": "data_2"},
+      "encode": {
+        "update": {
+          "align": {"value": "right"},
+          "fill": {"value": "firebrick"},
+          "description": {
+            "signal": "\"R2: \" + (isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"])"
+          },
+          "x": {"field": {"group": "width"}},
+          "y": {"value": -5},
+          "text": {
+            "signal": "isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"]"
+          },
+          "baseline": {"value": "middle"}
+        }
       }
     }
-  ]
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Total_Spent_Mill"},
+          {"data": "data_1", "field": "Total_Spent_Mill"}
+        ]
+      },
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Margin"},
+          {"data": "data_1", "field": "Margin"}
+        ]
+      },
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Total Spent on District (Million $)",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Margin of Victory (% points)",
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "config": {}
 }
