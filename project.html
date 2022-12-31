@@ -26,8 +26,11 @@
     <p> We then plot graphs showing correlation between amount spent and vote share. </p>
     <div class="chart" id="Chart1"></div>
     <p> We then consider the total spent on each seat. </p>
-    <p> We use this code (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/house_2020/district_totals.py) to produce this dataset (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_2020.csv) </p>
+    <p> We can <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/district_totals.py">manipulate</a>
+        our dataset to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_2020.csv">dataset</a>
+        showing the totals for each district. </p>
     <p> We then plot a map showing where the most was spent. </p> 
+    <div class="chart" id="Chart2"></div>
     <p> We see this seems to track with wealthy states. </p> 
     <p> We then use census data to consider whether household income correlates with amount spent on each seat. </p> 
     <p> So we get census data (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/census_household_income_2019.csv) and merge it (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/house_2020/household_income_merge.py) to produce this dataset (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_household_income_2020.csv) </p>
@@ -38,9 +41,11 @@
     
 <script>
     // Define charts
-    var myChart1 = "project/charts/2020_house_regression.json";
+    var myChart1 = "project/charts/house_regression_2020.json";
+    var myChart2 = "project/charts/house_2020_map.json";
     // Embed charts
     vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
 </script>
     
 </body>
