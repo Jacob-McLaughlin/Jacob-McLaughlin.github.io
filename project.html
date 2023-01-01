@@ -29,17 +29,18 @@
     <p> We can <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/district_totals.py">manipulate</a>
         our dataset to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_2020.csv">dataset</a>
         showing the totals for each district. </p>
+    <div class="chart" id="Chart2"></div>
     <p> One theory is that more money is spent on seats which are expected to be closely-fought, so we can consider if there is a correlation (which we expect to be negative) between margin of victory and total money spent. </p>
-    <div class="chart" id="Chart2"></div> 
+    <div class="chart" id="Chart3"></div> 
     <p> We then plot a map showing where the most was spent. </p> 
-    <div class="chart" id="Chart3"></div>
+    <div class="chart" id="Chart4"></div>
     <p> We see this seems to track with wealthy states. </p> 
     <p> We then use census data to consider whether household income correlates with amount spent on each seat. </p> 
     <p> So we use census <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/census_household_income_2019.csv">data</a>
         and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/household_income_merge.py">merge</a>
         it to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_household_income_2020.csv">dataset.</a></p>
     <p> We then plot a map or correlation showing whether that correlates. </p>
-    <div class="chart" id="Chart4"></div>
+    <div class="chart" id="Chart5"></div>
     <p> We then consider if in-state funding matters. </p>
     <p> We use data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_in_out_district_open_secrets.csv">OpenSecrets</a>
         and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/in_out_district_merge.py">clean</a> 
@@ -49,14 +50,16 @@
 <script>
     // Define charts
     var myChart1 = "project/charts/house_regression_2020.json";
-    var myChart2 = "project/charts/margin_money_regression_house_2020.json";
-    var myChart3 = "project/charts/house_2020_map.json";
-    var myChart4 = "project/charts/household_income_vs_spending_2020.json";
+    var myChart2 = "project/charts/histogram_spending_2020.json";
+    var myChart3 = "project/charts/margin_money_regression_house_2020.json";
+    var myChart4 = "project/charts/house_2020_map.json";
+    var myChart5 = "project/charts/household_income_vs_spending_2020.json";
     // Embed charts
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', myChart3);
     vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
 </script>
     
 </body>
