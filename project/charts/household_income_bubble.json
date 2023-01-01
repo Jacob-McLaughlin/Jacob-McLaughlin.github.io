@@ -1,0 +1,11 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": ["Bubble Plot Showing Median Household Income ","Against Total Spent on District, Adjusted", "for Margin of Victory"], "subtitle": "Sources - OpenSecrets and US Census"},
+  "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_household_income_2020.csv"},
+  "mark": {"type": "circle", "color": "darkorchid", "tooltip": {"content": "data"}},
+  "encoding": {
+    "x": {"field": "Total_Spent_Mill", "type": "quantitative", "title": "Total Spent on District ($)"},
+    "y": {"field": "Median_Household_Income", "type": "quantitative", "title": "Median Household Income ($)"},
+    "size": {"field": "Margin", "type": "quantitative", "title": ["Margin", "(% points)"]}
+  }
+}
