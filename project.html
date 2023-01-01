@@ -41,6 +41,7 @@
         it to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_household_income_2020.csv">dataset.</a></p>
     <p> We then plot a map or correlation showing whether that correlates. </p>
     <div class="chart" id="Chart5"></div>
+    <div class="chart" id="Chart6"></div>
     <p> We then consider if in-state funding matters. </p>
     <p> We use data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_in_out_district_open_secrets.csv">OpenSecrets</a>
         and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/in_out_district_merge.py">clean</a> 
@@ -53,13 +54,15 @@
     var myChart2 = "project/charts/histogram_spending_2020.json";
     var myChart3 = "project/charts/margin_money_regression_house_2020.json";
     var myChart4 = "project/charts/house_2020_map.json";
-    var myChart5 = "project/charts/household_income_vs_spending_2020.json";
+    var myChart5 = "project/charts/household_income_bubble.json";
+    var myChart6 = "project/charts/household_income_vs_spending_2020.json";
     // Embed charts
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', myChart3);
     vegaEmbed('#Chart4', myChart4);
     vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
 </script>
     
 </body>
