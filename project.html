@@ -39,8 +39,11 @@
         and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/household_income_merge.py">merge</a>
         it to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_household_income_2020.csv">dataset.</a></p>
     <p> We then plot a map or correlation showing whether that correlates. </p>
+    <div class="chart" id="Chart4"></div>
     <p> We then consider if in-state funding matters. </p>
-    <p> We use data from OpenSecrets (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_in_out_district_open_secrets.csv) and clean it (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/house_2020/in_out_district_merge.py) to produce this dataset (https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/in_distr_raised_2020.csv) </p>
+    <p> We use data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_in_out_district_open_secrets.csv">OpenSecrets</a>
+        and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/house_2020/in_out_district_merge.py">clean</a> 
+        it to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/in_distr_raised_2020.csv">dataset.</a></p>
     <p> We then plot a graph showing whether in-state funding matters, and compare to normal funding. </p> 
     
 <script>
@@ -48,10 +51,12 @@
     var myChart1 = "project/charts/house_regression_2020.json";
     var myChart2 = "project/charts/margin_money_regression_house_2020.json";
     var myChart3 = "project/charts/house_2020_map.json";
+    var myChart4 = "project/charts/household_income_vs_spending_2020.json";
     // Embed charts
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
 </script>
     
 </body>
