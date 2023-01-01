@@ -1,0 +1,207 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 200,
+  "height": 200,
+  "title": {
+    "text": [
+      "Median Household Income for House Districts in",
+      "2019 vs Amount Spent on Them in 2020 Election"
+    ],
+    "subtitle": "Source: OpenSecrets and US Census",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_household_income_2020.csv",
+      "format": {"type": "csv", "delimiter": ","}
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Total_Spent_Mill\"]) && isFinite(+datum[\"Total_Spent_Mill\"]) && isValid(datum[\"Median_Household_Income\"]) && isFinite(+datum[\"Median_Household_Income\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Total_Spent_Mill",
+          "y": "Median_Household_Income",
+          "extent": [0, 30],
+          "as": ["Total_Spent_Mill", "Median_Household_Income"]
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "Total_Spent_Mill",
+          "y": "Median_Household_Income",
+          "params": true,
+          "as": ["Total_Spent_Mill", "Median_Household_Income"]
+        },
+        {
+          "type": "formula",
+          "expr": "'R²: '+format(datum.rSquared, '.2f')",
+          "as": "R2"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "symbol",
+      "style": ["point"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.7},
+          "tooltip": {"signal": "datum"},
+          "fill": {"value": "red"},
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"Total_Spent_Mill: \" + (format(datum[\"Total_Spent_Mill\"], \"\")) + \"; Median_Household_Income: \" + (format(datum[\"Median_Household_Income\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "Total_Spent_Mill"},
+          "y": {"scale": "y", "field": "Median_Household_Income"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "line",
+      "style": ["line"],
+      "sort": {"field": "datum[\"Total_Spent_Mill\"]"},
+      "from": {"data": "data_1"},
+      "encode": {
+        "update": {
+          "stroke": {"value": "blue"},
+          "description": {
+            "signal": "\"Total Spent on District (Million $): \" + (format(datum[\"Total_Spent_Mill\"], \"\")) + \"; Median Household Income ($): \" + (format(datum[\"Median_Household_Income\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "Total_Spent_Mill"},
+          "y": {"scale": "y", "field": "Median_Household_Income"},
+          "defined": {
+            "signal": "isValid(datum[\"Total_Spent_Mill\"]) && isFinite(+datum[\"Total_Spent_Mill\"]) && isValid(datum[\"Median_Household_Income\"]) && isFinite(+datum[\"Median_Household_Income\"])"
+          }
+        }
+      }
+    },
+    {
+      "name": "layer_2_marks",
+      "type": "text",
+      "style": ["text"],
+      "from": {"data": "data_2"},
+      "encode": {
+        "update": {
+          "align": {"value": "right"},
+          "fill": {"value": "blue"},
+          "description": {
+            "signal": "\"R2: \" + (isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"])"
+          },
+          "x": {"field": {"group": "width"}},
+          "y": {"value": -5},
+          "text": {
+            "signal": "isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"]"
+          },
+          "baseline": {"value": "middle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Total_Spent_Mill"},
+          {"data": "data_1", "field": "Total_Spent_Mill"}
+        ]
+      },
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Median_Household_Income"},
+          {"data": "data_1", "field": "Median_Household_Income"}
+        ]
+      },
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Total Spent on District (Million $)",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Median Household Income ($)",
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "config": {}
+}
