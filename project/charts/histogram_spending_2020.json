@@ -12,6 +12,6 @@
       "axis": {"titleFontSize": 9, "titleFontWeight": "bold"},
       
     },
-    "y": {"aggregate": "count", "title": "Number of Districts in Range", "axis": {"tickCount": 10, "titleFontSize": 9, "titleFontWeight": "bold",}},
+    "y": {"aggregate": "count", "title": "Number of Districts in Range", "axis": {"tickCount": 10, "titleFontSize": 9, "titleFontWeight": "bold"}},
   }
 }
