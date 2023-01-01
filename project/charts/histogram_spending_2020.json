@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/district_totals_2020.csv"},
+  "title": ["Histogram Showing Distribution of ","Total Spent on House Districts in 2020"],
+  "mark": {"type": "bar", "color": "darkgoldenrod"},
+  "encoding": {
+    "x": {
+      "bin": {"binned": false, "step": 4},
+      "type": "quantitative",
+      "field": "Total_Spent_Mill",
+      "title": "Amount Spent on District in Million $ (Binned)",
+      "axis": {"titleFontSize": 9, "titleFontWeight": "bold"},
+      
+    },
+    "y": {"aggregate": "count", "title": "Number of Districts in Range", "axis": {"tickCount": 10, "titleFontSize": 9, "titleFontWeight": "bold",}},
+  }
+}
