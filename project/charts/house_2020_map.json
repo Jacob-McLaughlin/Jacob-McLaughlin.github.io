@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 350,
+  "width": 340,
   "height": 300,
   "title": {
     "text": "A Map Showing the Total Spent on House Districts in 2020",
