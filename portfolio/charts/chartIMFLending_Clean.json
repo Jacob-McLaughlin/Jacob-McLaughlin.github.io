@@ -11,7 +11,7 @@
   "data":{"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/IMFLending_Clean.csv"},
   
   "height": 300,
-  "width": 280,
+  "width": 300,
 
   "mark": {
     "type": "bar",
