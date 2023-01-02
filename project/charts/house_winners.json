@@ -1,13 +1,9 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "white",
-  "padding": 5,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 500,
   "height": 300,
   "title": {
-    "text": [
-      "A Map Showing the Party Affliation of Winners of House Districts"
-    ],
+    "text": ["A Map Showing the Party Affliation of Winners of House Districts"],
     "subtitle": ["Sources - MIT Election Lab, Github of deldersveld"],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
@@ -15,87 +11,42 @@
     "anchor": "start",
     "color": "black"
   },
-  "data": [
-    {
-      "name": "source_1",
-      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_winners_2018_2020.csv",
-      "format": {"type": "csv", "delimiter": ","}
-    },
-    {
-      "name": "source_0",
-      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/deldersveld_adapted_congress_2015",
-      "format": {
-        "type": "topojson",
-        "feature": "cb_2015_us_cd114_20m",
-        "parse": {}
-      },
-      "transform": [
-        {
-          "type": "formula",
-          "expr": "datum[\"properties\"] && datum[\"properties\"][\"GEOID\"]",
-          "as": "properties.GEOID"
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/deldersveld_adapted_congress_2015",
+    "format": {"type": "topojson", "feature": "cb_2015_us_cd114_20m"}
+  },
+      "params": [    
+    {"name":"signal1", 
+    "value":"2018",
+       "bind":{
+         "input": "select",
+         "options": ["2018", "2020"],
+         "name": "Year:"}}], 
+  "transform": [
+    {"calculate": "datum[signal1]",
+    "as": "y"},
+      {"lookup": "properties.GEOID",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_winners_2018_2020.csv"
         },
-        {"type": "formula", "expr": "datum[yearSelector]", "as": "y"},
-        {
-          "type": "lookup",
-          "from": "source_1",
-          "key": "Seat",
-          "fields": ["properties.GEOID"],
-          "values": ["2018", "2018"]
-        }
-      ]
-    }
-  ],
-  "projections": [
-    {
-      "name": "projection",
-      "size": {"signal": "[width, height]"},
-      "fit": {"signal": "data('source_0')"},
-      "type": "albersUsa"
-    }
-  ],
-  "signals": [
-    {
-      "name": "yearSelector",
-      "value": "2018",
-      "bind": {
-        "input": "select",
-        "options": ["2018", "2020"],
-        "name": "Year:"
+        "key": "Seat",
+        "fields": ["2018", "2020"],
       }
     }
   ],
-  "marks": [
-    {
-      "name": "marks",
-      "type": "shape",
-      "style": ["geoshape"],
-      "from": {"data": "source_0"},
-      "encode": {
-        "update": {
-          "fill": {"scale": "color", "field": "y"},
-          "tooltip": {
-            "signal": "{\"State\": isValid(datum[\"properties.GEOID\"]) ? datum[\"properties.GEOID\"] : \"\"+datum[\"properties.GEOID\"], \"Winning Party\": isValid(datum[\"y\"]) ? datum[\"y\"] : \"\"+datum[\"y\"]}"
-          },
-          "ariaRoleDescription": {"value": "geoshape"},
-          "description": {
-            "signal": "\"Winning Party: \" + (isValid(datum[\"y\"]) ? datum[\"y\"] : \"\"+datum[\"y\"]) + \"; State: \" + (isValid(datum[\"properties.GEOID\"]) ? datum[\"properties.GEOID\"] : \"\"+datum[\"properties.GEOID\"])"
-          }
-        }
-      },
-      "transform": [{"type": "geoshape", "projection": "projection"}]
-    }
-  ],
-  "scales": [
-    {
-      "name": "color",
-      "type": "ordinal",
-      "domain": ["D", "R"],
-      "range": ["blue", "red"]
-    }
-  ],
-  "legends": [
-    {"title": "Winning Party", "fill": "color", "symbolType": "circle"}
-  ],
-  "config": {}
+  "projection": {"type": "albersUsa"},
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "y",
+      "type": "nominal",
+      "title": "Winning Party",
+      "scale": {"domain": ["D","R"],"range": ["blue", "red"]},
+    },
+    "tooltip": [
+      {"field": "properties.GEOID", "type": "nominal", "title": "State"},
+      {"field": "y", "title": "Winning Party"}
+    ]
+  }
 }
