@@ -1,25 +1,124 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
   "width": 300,
   "height": 300,
   "title": {
-  "text": [
-      "CO2 emissions per capita versus GDP per capita"
-    ],
-"subtitle": "Source: Our World in Data (2018 data)",
+    "text": ["CO2 emissions per capita versus GDP per capita"],
+    "subtitle": "Source: Our World in Data (2018 data)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
-  "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/GDP_emissions_worldwide.csv"},
-  "mark": {
-    "type": "circle",
-    "color": "darkorchid",
-  },
-  "encoding": {
-    "x": {"field": "GDP per capita", "type": "quantitative", "title": "Real GDP per capita ($)"},
-    "y": {"field": "Annual CO2 emissions (per capita)", "type": "quantitative", "title": "CO2 emissions per capita (tonnes)"},
-    "tooltip": {"field": "Entity", "type": "nominal"},
-  }
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/GDP_emissions_worldwide.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"GDP per capita\"]) && isFinite(+datum[\"GDP per capita\"]) && isValid(datum[\"Annual CO2 emissions (per capita)\"]) && isFinite(+datum[\"Annual CO2 emissions (per capita)\"])"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "symbol",
+      "style": ["circle"],
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.7},
+          "fill": {"value": "darkorchid"},
+          "tooltip": {
+            "signal": "isValid(datum[\"Entity\"]) ? datum[\"Entity\"] : \"\"+datum[\"Entity\"]"
+          },
+          "ariaRoleDescription": {"value": "circle"},
+          "description": {
+            "signal": "\"Real GDP per capita ($): \" + (format(datum[\"GDP per capita\"], \"\")) + \"; CO2 emissions per capita (tonnes): \" + (format(datum[\"Annual CO2 emissions (per capita)\"], \"\")) + \"; Entity: \" + (isValid(datum[\"Entity\"]) ? datum[\"Entity\"] : \"\"+datum[\"Entity\"])"
+          },
+          "x": {"scale": "x", "field": "GDP per capita"},
+          "y": {"scale": "y", "field": "Annual CO2 emissions (per capita)"},
+          "shape": {"value": "circle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {"data": "source_0", "field": "GDP per capita"},
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "data": "source_0",
+        "field": "Annual CO2 emissions (per capita)"
+      },
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Real GDP per capita ($)",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "CO2 emissions per capita (tonnes)",
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "config": {}
 }
