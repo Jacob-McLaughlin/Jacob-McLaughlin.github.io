@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": "white",
   "padding": 5,
-  "width": 360,
+  "width": 350,
   "height": 300,
   "title": {
     "text": [
@@ -73,11 +73,11 @@
             {"scale": "color", "field": "2018"}
           ],
           "tooltip": {
-            "signal": "{\"State\": isValid(datum[\"properties.GEOID\"]) ? datum[\"properties.GEOID\"] : \"\"+datum[\"properties.GEOID\"]}"
+            "signal": "{\"District\": isValid(datum[\"properties.GEOID\"]) ? datum[\"properties.GEOID\"] : \"\"+datum[\"properties.GEOID\"]}"
           },
           "ariaRoleDescription": {"value": "geoshape"},
           "description": {
-            "signal": "\"Winning Party: \" + (isValid(datum[\"2018\"]) ? datum[\"2018\"] : \"\"+datum[\"2018\"]) + \"; State: \" + (isValid(datum[\"properties.GEOID\"]) ? datum[\"properties.GEOID\"] : \"\"+datum[\"properties.GEOID\"])"
+            "signal": "\"Winning Party: \" + (isValid(datum[\"2018\"]) ? datum[\"2018\"] : \"\"+datum[\"2018\"]) + \"; District: \" + (isValid(datum[\"properties.GEOID\"]) ? datum[\"properties.GEOID\"] : \"\"+datum[\"properties.GEOID\"])"
           }
         }
       },
