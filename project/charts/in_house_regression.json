@@ -1,0 +1,200 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 200,
+  "height": 200,
+  "title": {
+    "text": [
+      "Vote Share versus Proportion of Money",
+      "Raised In District Versus Opponent"
+    ],
+    "subtitle": ["Sources - OpenSecrets and Politico"],
+    "frame": "group"
+  },
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/project/data/house_2020/in_distr_raised_2020.csv",
+      "format": {"type": "csv", "delimiter": ","}
+    },
+    {
+      "name": "data_0",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"In_Distr_Prop_Versus_Opponent\"]) && isFinite(+datum[\"In_Distr_Prop_Versus_Opponent\"]) && isValid(datum[\"Vote_Share\"]) && isFinite(+datum[\"Vote_Share\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_1",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "In_Distr_Prop_Versus_Opponent",
+          "y": "Vote_Share",
+          "as": ["In_Distr_Prop_Versus_Opponent", "Vote_Share"]
+        }
+      ]
+    },
+    {
+      "name": "data_2",
+      "source": "source_0",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "In_Distr_Prop_Versus_Opponent",
+          "y": "Vote_Share",
+          "params": true,
+          "as": ["In_Distr_Prop_Versus_Opponent", "Vote_Share"]
+        },
+        {
+          "type": "formula",
+          "expr": "'R²: '+format(datum.rSquared, '.2f')",
+          "as": "R2"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "layer_0_marks",
+      "type": "symbol",
+      "style": ["point"],
+      "from": {"data": "data_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.7},
+          "fill": {"value": "seagreen"},
+          "ariaRoleDescription": {"value": "point"},
+          "description": {
+            "signal": "\"In_Distr_Prop_Versus_Opponent: \" + (format(datum[\"In_Distr_Prop_Versus_Opponent\"], \"\")) + \"; Vote_Share: \" + (format(datum[\"Vote_Share\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "In_Distr_Prop_Versus_Opponent"},
+          "y": {"scale": "y", "field": "Vote_Share"}
+        }
+      }
+    },
+    {
+      "name": "layer_1_marks",
+      "type": "line",
+      "style": ["line"],
+      "sort": {"field": "datum[\"In_Distr_Prop_Versus_Opponent\"]"},
+      "from": {"data": "data_1"},
+      "encode": {
+        "update": {
+          "stroke": {"value": "black"},
+          "description": {
+            "signal": "\"In_Distr_Prop_Versus_Opponent: \" + (format(datum[\"In_Distr_Prop_Versus_Opponent\"], \"\")) + \"; Vote_Share: \" + (format(datum[\"Vote_Share\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "In_Distr_Prop_Versus_Opponent"},
+          "y": {"scale": "y", "field": "Vote_Share"},
+          "defined": {
+            "signal": "isValid(datum[\"In_Distr_Prop_Versus_Opponent\"]) && isFinite(+datum[\"In_Distr_Prop_Versus_Opponent\"]) && isValid(datum[\"Vote_Share\"]) && isFinite(+datum[\"Vote_Share\"])"
+          }
+        }
+      }
+    },
+    {
+      "name": "layer_2_marks",
+      "type": "text",
+      "style": ["text"],
+      "from": {"data": "data_2"},
+      "encode": {
+        "update": {
+          "align": {"value": "right"},
+          "fill": {"value": "firebrick"},
+          "description": {
+            "signal": "\"R2: \" + (isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"])"
+          },
+          "x": {"field": {"group": "width"}},
+          "y": {"value": -5},
+          "text": {
+            "signal": "isValid(datum[\"R2\"]) ? datum[\"R2\"] : \"\"+datum[\"R2\"]"
+          },
+          "baseline": {"value": "middle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": [0, 100],
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_0", "field": "Vote_Share"},
+          {"data": "data_1", "field": "Vote_Share"}
+        ]
+      },
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": [
+        "Proportion of Total In-District",
+        "Money Raised by Candidate (%)"
+      ],
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Vote Share (%)",
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "config": {}
+}
