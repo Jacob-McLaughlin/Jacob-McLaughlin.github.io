@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "background": "white",
   "padding": 5,
-  "width": 390,
-  "height": 390,
+  "width": 340,
+  "height": 340,
   "title": {
     "text": [
       "A Map Showing the Party Affliation of Winners of House Districts"
