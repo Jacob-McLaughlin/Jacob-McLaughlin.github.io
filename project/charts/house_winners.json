@@ -46,7 +46,7 @@
     },
     "tooltip": [
       {"field": "properties.GEOID", "type": "nominal", "title": "State"},
-      {"field": "winner_2018", "title": "Winning Party"}
+      {"field": "y", "title": "Winning Party"}
     ]
   }
 }
