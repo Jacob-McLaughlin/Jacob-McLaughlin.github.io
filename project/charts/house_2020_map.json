@@ -34,7 +34,7 @@
   "encoding": {
     "color": {"field": "Total_Raised_Mill", "type": "quantitative", "title": "Total Spent (Million $)"},
     "tooltip": [
-      {"field": "properties.GEOID", "type": "nominal", "title": "County"},
+      {"field": "properties.GEOID", "type": "nominal", "title": "District"},
       {"field": "Total_Raised_Mill", "title": "Total Spent (Million $)"}
     ]
   }
