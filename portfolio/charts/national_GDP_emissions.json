@@ -1,95 +1,25 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 330,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
   "height": 300,
   "title": {
-    "text": ["CO2 emissions per capita versus GDP per capita"],
-    "subtitle": "Source: Our World in Data (2018 data)",
+  "text": [
+      "CO2 emissions per capita versus GDP per capita"
+    ],
+"subtitle": "Source: Our World in Data (2018 data)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
-  "data": [
-    {
-      "name": "source_0",
-      "url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/GDP_emissions_worldwide.csv",
-      "format": {"type": "csv", "delimiter": ","},
-      "transform": [
-        {
-          "type": "filter",
-          "expr": "isValid(datum[\"GDP per capita\"]) && isFinite(+datum[\"GDP per capita\"]) && isValid(datum[\"Annual CO2 emissions (per capita)\"]) && isFinite(+datum[\"Annual CO2 emissions (per capita)\"])"
-        }
-      ]
-    },
-    {
-      "name": "fit",
-      "source": "source_0",
-      "transform": [
-        {
-          "type": "regression",
-          "method": "quad",
-          "x": "GDP per capita",
-          "y": "Annual CO2 emissions (per capita)",
-          "as": ["u", "v"]
-        }
-      ]
-    }
-  ],
-  "scales": [
-    {
-      "name": "x",
-      "type": "linear",
-      "domain": {"data": "source_0", "field": "GDP per capita"},
-      "range": [0,250]
-    },
-    {
-      "name": "y",
-      "type": "linear",
-      "domain": {
-        "data": "source_0",
-        "field": "Annual CO2 emissions (per capita)"
-      },
-      "range": "height"
-    }
-  ],
-  "axes": [
-    {
-      "orient": "left",
-      "scale": "y",
-      "title": "CO2 emissions per capita (tonnes)"
-    },
-    {"orient": "bottom", "scale": "x", "title": "Real GDP per capita ($)"}
-  ],
-  "marks": [
-    {
-      "name": "points",
-      "type": "symbol",
-      "from": {"data": "source_0"},
-      "encode": {
-        "enter": {
-          "x": {"scale": "x", "field": "GDP per capita"},
-          "y": {"scale": "y", "field": "Annual CO2 emissions (per capita)"},
-          "size": {"value": 25},
-          "fillOpacity": {"value": 1}
-        }
-      }
-    },
-    {
-      "type": "text",
-      "from": {"data": "points"},
-      "encode": {
-        "enter": {"text": {"field": "datum.Entity"}, "fontSize": {"value": 8}}
-      },
-      "transform": [
-        {
-          "type": "label",
-          "anchor": ["top", "bottom", "right", "left"],
-          "offset": [1],
-          "size": {"signal": "[width + 60, height]"}
-        }
-      ]
-    }
-  ],
-  "config": {}
+  "data": {"url": "https://raw.githubusercontent.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/main/portfolio/data/GDP_emissions_worldwide.csv"},
+  "mark": {
+    "type": "circle",
+    "color": "darkorchid",
+  },
+  "encoding": {
+    "x": {"field": "GDP per capita", "type": "quantitative", "title": "Real GDP per capita ($)"},
+    "y": {"field": "Annual CO2 emissions (per capita)", "type": "quantitative", "title": "CO2 emissions per capita (tonnes)"},
+    "tooltip": {"field": "Entity", "type": "nominal"},
+  }
 }
