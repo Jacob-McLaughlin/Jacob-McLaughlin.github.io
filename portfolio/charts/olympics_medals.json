@@ -34,6 +34,6 @@
       "title": "National Population (2021)"
     },
     "color": {"value": "green"},
-    "tooltip": [{"field": "Country", "type": "nominal", "title": "Nation"}, {"field": "2008_medals", "title": "Medals in 2008"}, {"field": "2012_medals", "title": "Medals in 2012"}, {"field": "population", "title": "National Population"}],
+    "tooltip": {"field": "Country", "type": "nominal", "title": "Nation"}
   }
 }
