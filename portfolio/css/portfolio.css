@@ -17,15 +17,6 @@ h1, h3, p{
 
 .chart{
     background-color: white;
-    width:400px;
-    border-width: 10px;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: white;
-}
-
-.chart{
-    background-color: white;
     width:500px;
     border-width: 10px;
     border-style: solid;
@@ -36,12 +27,12 @@ h1, h3, p{
 
 /* Hyperlinks */
 a:link {
-  color: #ffbc19;
+  color: #8B0000;
   background-color: transparent;
   text-decoration: underline;
 }
 a:visited {
-  color: #ffbc19;
+  color: #0062CC;
   background-color: transparent;
   text-decoration: underline;
 }
