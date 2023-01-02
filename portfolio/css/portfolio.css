@@ -3,14 +3,16 @@
 
 body{
     background-color: #ccff00;
-      max-width: 900px;
     margin: auto;
+    max-width: 900px;
+    text-align: center;
     overflow: auto;
-}
+ }
 
 h1, h3, p{
     color: #000000;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 .chart{
@@ -21,4 +23,37 @@ h1, h3, p{
     border-radius: 5px;
     border-color: white;
 }
+
+.chart{
+    background-color: white;
+    width:500px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+}
+
+
+/* Hyperlinks */
+a:link {
+  color: #ffbc19;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:visited {
+  color: #ffbc19;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #379683;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
  
