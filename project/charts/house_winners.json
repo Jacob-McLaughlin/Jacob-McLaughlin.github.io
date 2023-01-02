@@ -41,7 +41,7 @@
           "from": "source_1",
           "key": "Seat",
           "fields": ["properties.GEOID"],
-          "values": ["winner_2018", "winner_2020"]
+          "values": ["2018", "2018"]
         }
       ]
     }
@@ -57,10 +57,10 @@
   "signals": [
     {
       "name": "yearSelector",
-      "value": "winner_2018",
+      "value": "2018",
       "bind": {
         "input": "select",
-        "options": ["winner_2018", "winner_2020"],
+        "options": ["2018", "2020"],
         "name": "Year:"
       }
     }
