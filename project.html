@@ -50,8 +50,38 @@
     <div class="chart" id="Chart2"></div>
     <p> As in-district donations represent popularity among voting constituents and as people may be more likely to donate afar to high-profile candidates in uncompetitive
         races, we might expect in-district donations to have a greater impact than other donations. However, this is not borne out in the data, as although money raised
-        in-district is correlated with vote share, the effect isn't as great as when considering the total amount raised. </p>    
-    
+        in-district is correlated with vote share, the effect isn't as great as when considering the total amount raised. </p>
+    <p> MIT's Election <a class="textLink" href="https://electionlab.mit.edu/data">Lab</a> contains
+        <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/2018_2020_house_results.csv">data</a>
+        on House results in both 2018 and 2020, which we can <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/results_clean_2018_2020.py">manipulate</a>
+        to get a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_winners_2018_2020.csv">dataset</a>
+        showing which party won each seat. </p>
+    <div class="chart" id="Chart3"></div>
+    <p> By considering the two maps, it is clear that an overwhelming majority of seats were retained by the party that held them. Although campaign finance can
+        affect outcomes, constituencies have demographics and partisan leans which are difficult to overcome. </p>
+    <h2> Why some races are more expensive than others </h2>
+    <p> We can <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/district_totals.py">analyse</a>
+        our data to show the total spent on each <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_2020.csv">seat</a>,
+        and plot a histogram showing the distribution of totals spent. </p>
+    <div class="chart" id="Chart4"></div>
+    <p> The histogram shows that an overwhelming majority of seats receive modest investment, with a select few receiving many multiples more. One possible explanation
+        is that people are more likely to give to candidates in closely-fought races where their donations can make a difference. </p>
+    <div class="chart" id="Chart5"></div>
+    <p> The chart shows that there seems to be limited correlation between the margin of victory and the total spend, so it is not clear that people tend to donate
+        to tight races. We can plot a map showing where the most was spent. </p>
+    <div class="chart" id="Chart6"></div> 
+    <p> There is considerable geographic variation, but it is notable that high-spending races seem to occur in big, wealthy states such as California, New York and
+        Texas. We can use census <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/census_household_income_2019.csv">data</a> 
+        and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/household_income_merge.py">clean</a>
+        it to create a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_household_income_2020.csv">dataset</a>
+        that allows to consider whether expensive races are more likely to occur in wealthier places. </p> 
+    <div class="chart" id="Chart7"></div>
+    <p> There seems to be no clear pattern, with most of the seats which received the greatest investments having relatively normal median household incomes.
+        In reality, most expensive races involve high-profile candidates and powerful politicians, so these races are important to parties 
+        and attract significant media attention. </p>
+    <h2> Conclusions </h2>
+    <p> Generally, the more a candidate raises the more likely they are to win. </p> 
+       
 <script>
     // Define charts
     var myChart1 = "project/charts/house_regression_2020.json";
