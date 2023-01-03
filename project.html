@@ -25,15 +25,18 @@
         House of Representatives in 2020 - which has the most comprehensive campaign finance data available - this project seeks to investigate the extent to which
         campaign finances influence the outcome of elections, while also considering why some campaigns raise more money than others. </p> 
     <h2> The relationship between campaign finances and election outcomes </h2> 
-    <h3> The relationship between campaign finances and election outcomes </h2> 
-    <p> I scraped data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_scraping.py">Politico</a>
-        to get <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/politico_2020_house.csv">data</a>
-        on 2020 election outcomes. I then scraped data from <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/open_secrets_scraping.py">OpenSecrets</a>
-        to get financial <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_finances_2020_open_secrets.csv">data</a> 
-        for house seats in the 2020 election. </p>        
-    <p> I then <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_open_secrets_merge_clean.py">cleaned</a> 
-    and merged these datasets to create this <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_results_and_finances_final.csv">dataset</a>. </p>
-    <p> We then plot graphs showing correlation between amount spent and vote share. </p>
+    <p> In order to create a dataset detailing the outcome of elections in 2020, I <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_scraping.py">scraped</a>
+        <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/politico_2020_house.csv">data</a> 
+        from <a class="textLink" href="https://www.politico.com">Politico </a>. I also 
+        <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/open_secrets_scraping.py">scraped</a> 
+        data from <a class="textLink" href="https://www.opensecrets.org/">OpenSecrets</a> to obtain financial
+        <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_finances_2020_open_secrets.csv">data</a> 
+        for candidates in these elections. </p> 
+    <p> These sources had data with differing formatting, as field such as candidate and district name had contrasting formats. In order to produce a useable
+        <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_results_and_finances_final.csv">dataset</a>
+        I merged and cleaned data from these sources in <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_open_secrets_merge_clean.py">Python</a>.
+        I also had to drop some data, as not all house seats had financial data available for all candidates. The following chart plots a regression of a candidate's final
+        vote share against the percentage of the total money in their seat they were responsible for spending/raising. </p>        
     <div class="chart" id="Chart1"></div>
     <p> We then consider the total spent on each seat. </p>
     <p> We can <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/district_totals.py">manipulate</a>
