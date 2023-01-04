@@ -22,13 +22,13 @@
 
 <body>
 <h1>Data Science Portfolio</h1>
-<h2> By Jacob McLaughlin</h2>
+<h3> By Jacob McLaughlin</h3>
 <p> You can access my home page <a class="textLink" href="https://jacob-mclaughlin.github.io/index">here</a>.</p>
 <p> You can access my project <a class="textLink" href="https://jacob-mclaughlin.github.io/project.html">here</a>.</p>
 
 
 <!--Week 1-->
-<h3> Week 1 </h3>
+<h2> Week 1 </h2>
 <p> The task this week was to embed two charts.</p>
 <p>This chart shows Carbon per capita by country.</p>
 <div class="chart" id="Chart1"></div>
@@ -36,7 +36,7 @@
 <div class="chart" id="Chart2"> </div>
 
 <!--Week 2-->
-<h3> Week 2 </h3>
+<h2> Week 2 </h2>
 <p> This chart shows data for IMF lending. </p>
 <div class="chart" id ="Chart3"></div>
 <p> This chart shows data for IMF lending, adjusted for GDP. </p>
@@ -44,7 +44,7 @@
 <p> The chart shows the IMF lent the most as a proportion of GDP in 1984, suggesting this was a riskier year to invest than 2022. </p>
 
 <!--Week 3-->
-<h3> Week 3</h3>
+<h2> Week 3</h2>
 <p> The chart below shows data for the unemployment rate in the USA taken from FRED. This data is encoded inline into VegaLite, after being imported and edited in Python.  </p>
 <div class="chart" id ="Chart5"></div>
 <p> The chart below shows the same data but with the visual encoding changed, and the data now represented as a line chart. </p>
@@ -52,14 +52,14 @@
 <p> As the data is a time series, changing the visual encoding to a line chart makes it easier to see small changes year-on-year and long-term trends.</p>
 
 <!--Week 4-->
-<h3> Week 4</h3>
+<h2> Week 4</h2>
 <p>I scraped data from Wikipedia to create a chart showing the longest-serving Prime Ministers of the UK. The Google Colab notebook used to scrape and clean the data can be found  <a class="textLink" href="https://colab.research.google.com/drive/1SL6gWebgtyVuv9k1po0mzr0wr06kUSuN?usp=sharingl"> here</a></p>
 <p> A chart showing the 25 longest serving Prime Ministers of the UK is shown below. </p>
 <div class="chart" id="Chart7"></div>
 <p> I chose to scrape Wikipedia as it has a wide range of data and as the formatting of the data (tenure given in years and days) presented an interesting challenge. </p>
 
 <!--Week 5-->
-<h3>Week 5</h3> 
+<h2>Week 5</h2> 
 <p> I used the ONS API to create a dashboard of time series all relating to economic inactivity in the UK. </p>
         <container class="container-fluid">
             <div class="chartw3" id="Chart8"> </div>
@@ -77,11 +77,11 @@
 <p> The Google Colab notebook used to obtain data from the API can be found <a class="textLink" href="https://colab.research.google.com/drive/1w5ocU0GOo_LJkR_QAjCLjKjDpTgiNYwJ?usp=sharing"> here</a>.</p>
 
 <!--Week 6-->
-<h3> Week 6</h3>
+<h2> Week 6</h2>
 <p> Week 6 is reading week - no task. </p>
 
 <!--Week 7-->
-<h3> Week 7</h3>
+<h2> Week 7</h2>
 <p> The map below is a map showing all of the counties of the US State of Georgia. </p>
 <div class="chart" id="Chart17"></div>
 <p> The chart below shows the same map of the US State of Georgia, but adapted to be a choropleth map showing the poverty rates of the various counties. </p>
@@ -89,7 +89,7 @@
 <p> The map shows poverty rates vary across the state, with pockets of lower poverty in the North-West and areas of higher poverty in the South-West.</p>
 
 <!--Week 8-->
-<h3> Week 8</h3>
+<h2> Week 8</h2>
 <p>At the Festival of Economics, Alessio Terzi claimed that CO2 emissions and economic growth intrinsically linked, both historically and in the modern-day.</p>
 <p> The chart below plots CO2 emissions per capita against GDP per capita for different countries. </p>
 <div class="chart" id="Chart19"></div>
@@ -99,7 +99,7 @@
 <p> The second chart refutes the claim, since CO2 emissions per capita have fallen significantly since 1970 in the UK, but the economy has continued to grow. </p>
 
 <!--Week 9-->
-<h3> Week 9</h3>
+<h2> Week 9</h2>
 <p> The two charts in this section use advanced analytics.</p>
 <p> The chart below is a scatter plot including a regression line drawn using the Vega editor. </p>
 <div class="chart" id="Chart21"></div>
@@ -107,14 +107,21 @@
 <div class="chart" id="Chart22"></div>
 
 <!--Week 10-->
-<h3> Week 10 and Week 11</h3>
+<h2> Week 10 and Week 11</h2>
 <p> These tasks require conducting applied data analysis using machine learning techniques. We first perform an unsupervised machine
-    learning technique (clustering), and then perform a supervised machine learning technique (linear regression). </p>
+    learning technique (k-means clustering), and then perform a supervised machine learning technique (linear regression). </p>
+<p> Using data for the 2018-19 Premier League season from footystats.org, we will investigate some features of "xG", a metric which quantifies
+    the quality of chances created in a football game. </p>
+<h3> Clustering </h3>
+<p> As xG reflects team strength, we expect teams with similar final positions (labelled as numbers) to be clustered together, with better teams in the bottom-right. </p>
 <img alt="Clustering" src="portfolio/images/xG_clustering.png" style="width:65%;height:auto;">
-<p> This is a line2. </p>
+<p> The clustering generally grouped teams with similar final positions together, and better teams towards the bottom-right, as expected. </p>
+<h3> Linear Regression </h3>
+<p> We expect average goals per game and average xG per game to be positively correlated, as a higher xG reflects creating high-quality scoring chances. </p> 
 <img alt="Regression" src="portfolio/images/xG_regression.png" style="width:65%;height:auto;">
+<p> The chart shows there is a relatively-strong positive correlation between average goals scored and average xG, which is what we expected. </p> 
 <p> The Colab notebook used to perform these tasks can be found
-    <a class="textLink" href="https://colab.research.google.com/drive/19OTfugbsvWrkhLMHsy3JRmqoJUAvqkVo?usp=sharing">here</a>. </p>
+<a class="textLink" href="https://colab.research.google.com/drive/19OTfugbsvWrkhLMHsy3JRmqoJUAvqkVo?usp=sharing">here</a>. </p>
 
 
 <script>
