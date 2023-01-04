@@ -40,9 +40,9 @@
     <div class="chart" id="Chart1"></div>
     <p> The data shows a positive correlation between how much more a candidate has raised or spent than their opponent and final vote share. As most candidates spend close to all the money they raise, 
         unsurprisingly there is little variation between considering money raised and money spent. </p>
-    <p> Although we can say that generally the candidate that spends the most wins, we cannot contribute this solely to the presence of greater finances. Increased
+    <p> Although we can say that generally the candidate that spends the most wins, we cannot attribute this solely to the presence of higher finances. Increased
         finances help candidates with advertising and staffing, but also reflect initial popularity. </p>
-    <p> Another perspective to consider is where the money comes from. OpenSecrets provide <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_in_out_district_open_secrets.csv">data</a>
+    <p> Another perspective to consider is where the money comes from. OpenSecrets provide downloadable <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_in_out_district_open_secrets.csv">data</a>
         on the proportion of money a candidate receives from within their seat, which we can <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/in_out_district_merge.py">manipulate</a>
         to produce a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/in_distr_raised_2020.csv">dataset</a>
         showing the relative amount of in-district money a candidate raised. </p>
@@ -70,10 +70,11 @@
         to tight races. We can plot a map showing where the most was spent. </p>
     <div class="chart" id="Chart6"></div> 
     <p> There is considerable geographic variation, but it is notable that high-spending races seem to occur in big, wealthy states such as California, New York and
-        Texas. We can use census <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/census_household_income_2019.csv">data</a> 
-        and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/household_income_merge.py">clean</a>
+        Texas. We can use <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/census_household_income_2019.csv">data</a> 
+        from the US Census and <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/household_income_merge.py">use</a>
         it to create a <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/district_totals_household_income_2020.csv">dataset</a>
-        that allows to consider whether expensive races are more likely to occur in wealthier places. </p> 
+        that allows to consider whether expensive races are more likely to occur in wealthier places. As well as needing merging with our dataset, the formatting of seat names in the Census data
+    means we had to clean the data in Python too.</p> 
     <div class="chart" id="Chart7"></div>
     <p> There seems to be no clear pattern, with most of the seats which received the greatest investments having relatively normal median household incomes.
         In reality, most expensive races involve high-profile candidates and powerful politicians, so these races are important to parties 
