@@ -32,11 +32,11 @@
         data from <a class="textLink" href="https://www.opensecrets.org/">OpenSecrets</a> to obtain financial
         <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_finances_2020_open_secrets.csv">data</a> 
         for candidates in these elections. </p> 
-    <p> These sources had data with differing formatting, as field such as candidate and district name had contrasting formats. In order to produce a useable
-        <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_results_and_finances_final.csv">dataset</a>
-        I merged and cleaned data from these sources in <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_open_secrets_merge_clean.py">Python</a>.
-        I also had to drop some data, as not all house seats had financial data available for all candidates. The following chart plots a regression of a candidate's final
-        vote share against the percentage of the total money in their seat they were responsible for spending/raising. </p>        
+    <p> I then cleaned this data in <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/code_snippets/politico_open_secrets_merge_clean.py">Python</a>
+        to create a useable <a class="textLink" href="https://github.com/Jacob-McLaughlin/Jacob-McLaughlin.github.io/blob/main/project/data/house_2020/house_2020_results_and_finances_final.csv">dataset</a>.</p>
+    <p> Difficulties arose in cleaning and merging these datasets as fields such as candidate and district name had differing formats. Some observations had to be dropped as
+        not all house seats contained financial data for all candidates. </p>
+    <p> The following chart plots a regression of a candidate's final vote share and the percentage of the total money in their seat they were responsible for spending/raising. </p>        
     <div class="chart" id="Chart1"></div>
     <p> The data shows a positive correlation between how much more a candidate has raised or spent than their opponent and final vote share. As most candidates spend close to all the money they raise, 
         unsurprisingly there is little variation between considering money raised and money spent. </p>
