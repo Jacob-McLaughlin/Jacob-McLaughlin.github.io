@@ -4,7 +4,7 @@
 body{
     background-color: #ccff00;
     margin: auto;
-    max-width: 600px;
+    max-width: 900px;
     text-align: center;
     overflow: auto;
  }
@@ -16,7 +16,7 @@ h1, h3, p{
 }
 
 h2{
-    color:rgb(51, 255, 255);
+    color:rgb(178,34,34);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
