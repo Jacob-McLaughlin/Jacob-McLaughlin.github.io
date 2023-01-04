@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
-    "description": "Wild fires",
+    "description": "A chart from RapidCharts repository showing Wild fires",
    
   
     "title": {
-      "text": "California wildfires - top 20 by size",
+      "text": "California Wildfires Graph from RapidCharts",
       "subtitle":"Acres. Source: Cal fire",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
