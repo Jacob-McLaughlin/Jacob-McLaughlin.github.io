@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Carbon per capita by country",
+  "description": "A chart from RapidCharts repository showing Carbon per capita by country",
 
 "title": {
-    "text": "CO2 Emissions",
+    "text": "CO2 Emissions Graph from RapidCharts",
     "subtitle":"Tonnes per capita. Source: Global Carbon Project",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
